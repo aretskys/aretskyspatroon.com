@@ -732,14 +732,6 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bourbon-neat@1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/bourbon-neat/-/bourbon-neat-1.7.2.tgz#a228b1274479de2476d32b33153107ca5053cf3d"
-
-bourbon@^4.2.6:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.4.tgz#4da380029e92c0c8f9764c779451a134b11e7cc3"
-
 brace-expansion@^1.0.0:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.6.tgz#7197d7eaa9b87e648390ea61fc66c84427420df9"
@@ -3638,12 +3630,6 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-bourbon@^4.2.3:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/node-bourbon/-/node-bourbon-4.2.8.tgz#e444f1f09434ab7650ea318c28e2e103d3f942cd"
-  dependencies:
-    bourbon "^4.2.6"
-
 node-gyp@^3.3.1:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/node-gyp/-/node-gyp-3.5.0.tgz#a8fe5e611d079ec16348a3eb960e78e11c85274a"
@@ -3661,13 +3647,6 @@ node-gyp@^3.3.1:
     semver "2.x || 3.x || 4 || 5"
     tar "^2.0.0"
     which "1"
-
-node-neat@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/node-neat/-/node-neat-1.7.2.tgz#38472910b815e261b8b1b99ba519994465a15c21"
-  dependencies:
-    bourbon-neat "1.7.2"
-    node-bourbon "^4.2.3"
 
 node-pre-gyp@^0.6.29:
   version "0.6.33"
@@ -3735,6 +3714,10 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
+normalize-scss@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.0.tgz#92eaac6554cc376336c06682a0d6a2099bbb0889"
+
 normalize-url@^1.4.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-1.9.0.tgz#c2bb50035edee62cd81edb2d45da68dc25e3423e"
@@ -3743,10 +3726,6 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
-
-normalize.scss@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/normalize.scss/-/normalize.scss-0.1.0.tgz#4a21dc25bd4c019c857785f829b658aba2a8f9ab"
 
 now-and-later@^1.0.0:
   version "1.0.0"
@@ -5123,6 +5102,16 @@ swap-case@^1.1.0:
   dependencies:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
+
+tachyons-sass@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/tachyons-sass/-/tachyons-sass-4.7.4.tgz#47199472f444f1451692ec4509c5da700569ea57"
+  dependencies:
+    tachyons "^4.7.4"
+
+tachyons@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.7.4.tgz#eca4ffa15c1f06a357f088c6d0e687fc5f0408cc"
 
 tar-pack@~3.3.0:
   version "3.3.0"
