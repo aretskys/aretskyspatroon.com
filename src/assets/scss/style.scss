@@ -5,27 +5,15 @@
   "node_modules/normalize-scss/sass/normalize/import-now";
 
 // Modules
-// @import
-  // "modules/vars",
-  // "modules/visual-grid",
-  // "modules/mixins",
-  // "modules/layouts",
-  // "modules/header",
-  // "modules/home",
-  // "modules/contact",
-  // "modules/about",
-  // "modules/projects",
-  // "modules/project",
-  // "modules/clients",
-  // "modules/category",
-  // "modules/work",
-  // "modules/articles",
-  // "modules/footer",
-  // "modules/flickity",
-  // "modules/utilities-accessibility",
-  // "modules/utilities-iframes",
-  // "modules/utilities"
-// ;
+@import
+  "modules/vars",
+  "modules/header",
+  "modules/mixins",
+  "modules/layouts",
+  "modules/footer",
+  "modules/flickity",
+  "modules/utilities"
+;
 
 
 

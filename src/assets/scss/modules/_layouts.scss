@@ -11,13 +11,6 @@
 
 main, header, footer {
   text-align: left;
-  @include container();
-  @include media($s-up) {
-    @include pad(1rem);
-  }
-  @include media($xl-up) {
-    @include pad(0);
-  }
 }
 
 // remove padding except at top, sides, bottom of window
@@ -34,38 +27,6 @@ main {
 footer {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-// utitlity classes
-
-.mobile {
-  @include media($s-up) {
-    display: inherit !important;
-  }
-  @include media($m-up) {
-    display: inherit !important;
-  }
-  @include media($l-up) {
-    display: none !important;
-  }
-  @include media($xl-up) {
-    display: none !important;
-  }
-}
-
-.desktop {
-  @include media($s-up) {
-    display: none !important;
-  }
-  @include media($m-up) {
-    display: none !important;
-  }
-  @include media($l-up) {
-    display: inherit !important;
-  }
-  @include media($xl-up) {
-    display: inherit !important;
-  }
 }
 
 
