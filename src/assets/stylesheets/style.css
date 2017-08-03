@@ -7467,6 +7467,11 @@ template {
 [hidden] {
   display: none; }
 
+header {
+  background-color: #D63236; }
+  header img.logo {
+    height: 125px; }
+
 main, header, footer {
   text-align: left; }
 
