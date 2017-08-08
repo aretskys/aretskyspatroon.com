@@ -1,6 +1,20 @@
-header {
-  background-color: $brand;
+#header {
+  height: 100px;
   img.logo {
-    height: 100px;
+    // height: 100%;
+  }
+  #header__book {
+    margin-top: 1.7rem;
+    // @include vertical-align();
+  }
+}
+
+#nav {
+  height: 3rem;
+  .navitem {
+    color: $text-light;
+    font-size: 15px;
+    letter-spacing: 1px;
+    flex: 0 1 auto;
   }
 }

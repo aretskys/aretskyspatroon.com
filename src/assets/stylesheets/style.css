@@ -1,3 +1,9 @@
+.bg-brand-brown {
+  background-color: #3C0D05; }
+
+.bg-brand-red {
+  background-color: #D63236; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -7467,10 +7473,19 @@ template {
 [hidden] {
   display: none; }
 
-header {
-  background-color: #D63236; }
-  header img.logo {
-    height: 100px; }
+#header {
+  height: 100px; }
+  #header #header__book {
+    margin-top: 1.7rem; }
+
+#nav {
+  height: 3rem; }
+  #nav .navitem {
+    color: #fdfcf3;
+    font-size: 15px;
+    letter-spacing: 1px;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto; }
 
 main, header, footer {
   text-align: left; }
@@ -7633,5 +7648,47 @@ sub {
 
 .hidden-js, .hidden {
   display: none; }
+
+@font-face {
+  font-family: "Agenda Bold";
+  src: url("../fonts/AgendaBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Agenda Medium";
+  src: url("../fonts/Agenda-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Agenda Light";
+  src: url("../fonts/AgendaLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Calluna Light';
+  src: url("../fonts/CallunaLight.woff") format("woff"), url("../fonts/CallunaLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Calluna Regular';
+  src: url("../fonts/CallunaReg.woff") format("woff"), url("../fonts/CallunaReg.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Calluna Italic';
+  src: url("../fonts/CallunaItalic.woff") format("woff"), url("../fonts/CallunaItalic.ttf") format("truetype"); }
+
+.agendabold {
+  font-family: "Agenda Bold"; }
+
+.agendalight {
+  font-family: "Agenda Light"; }
+
+.agendamedium {
+  font-family: "Agenda Medium"; }
+
+.calluna {
+  font-family: 'Calluna Regular'; }
+
+.callunalight {
+  font-family: 'Calluna Light'; }
+
+.callunaitalic {
+  font-family: 'Calluna Italic'; }
 
 /*# sourceMappingURL=style.css.map */

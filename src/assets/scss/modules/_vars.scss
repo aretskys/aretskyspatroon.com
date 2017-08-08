@@ -1,2 +1,12 @@
-$brand: #D63236;
-$text: #335769;
+$brand-brown: #3C0D05;
+$brand-red: #D63236;
+$text-dark: rgba(0,0,0,.8);
+$text-light: #fdfcf3;
+
+.bg-brand-brown {
+  background-color: $brand-brown;
+}
+
+.bg-brand-red {
+  background-color: $brand-red;
+}
