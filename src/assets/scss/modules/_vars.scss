@@ -1,12 +1,26 @@
 $brand-brown: #3C0D05;
 $brand-red: #D63236;
+$brand-cream: #fefdf5;
 $text-dark: rgba(0,0,0,.8);
 $text-light: #fdfcf3;
 
+.brand-brown {
+  color: $brand-brown;
+}
 .bg-brand-brown {
   background-color: $brand-brown;
 }
 
+.brand-cream {
+  color: $brand-cream;
+}
+.bg-brand-cream {
+  background-color: $brand-cream;
+}
+
+.brand-red {
+  color: $brand-red;
+}
 .bg-brand-red {
   background-color: $brand-red;
 }

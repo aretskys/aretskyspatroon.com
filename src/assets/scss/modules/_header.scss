@@ -7,10 +7,20 @@
     margin-top: 1.7rem;
     // @include vertical-align();
   }
+  .social {
+    height: 100px;
+    a {
+      @include vertical-align();
+      // height: 30px;
+      img {
+        height: 100%;
+      }
+    }
+  }
 }
 
 #nav {
-  height: 3rem;
+  height: 3.5rem;
   .navitem {
     color: $text-light;
     font-size: 15px;

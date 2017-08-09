@@ -1,5 +1,17 @@
+.brand-brown {
+  color: #3C0D05; }
+
 .bg-brand-brown {
   background-color: #3C0D05; }
+
+.brand-cream {
+  color: #fefdf5; }
+
+.bg-brand-cream {
+  background-color: #fefdf5; }
+
+.brand-red {
+  color: #D63236; }
 
 .bg-brand-red {
   background-color: #D63236; }
@@ -7477,9 +7489,17 @@ template {
   height: 100px; }
   #header #header__book {
     margin-top: 1.7rem; }
+  #header .social {
+    height: 100px; }
+    #header .social a {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+      #header .social a img {
+        height: 100%; }
 
 #nav {
-  height: 3rem; }
+  height: 3.5rem; }
   #nav .navitem {
     color: #fdfcf3;
     font-size: 15px;
