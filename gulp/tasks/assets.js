@@ -26,6 +26,7 @@ gulp.task('scripts', () =>
   gulp.src([
     'node_modules/jquery/dist/jquery.js',
     'src/assets/javascript/imagesloaded.js',
+    'src/assets/javascript/slick.js',
     'src/assets/javascript/enquire.js',
     'node_modules/imgix.js/dist/imgix.js',
     'src/assets/javascript/main.js'

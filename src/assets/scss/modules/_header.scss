@@ -25,6 +25,10 @@
     color: $text-light;
     font-size: 15px;
     letter-spacing: 1px;
-    flex: 0 1 auto;
+    padding: 1.4em 0;
+    transition: color 0.1s;
+    &:hover {
+      color: $brand-red;
+    }
   }
 }
