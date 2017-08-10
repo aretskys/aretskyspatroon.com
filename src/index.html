@@ -1,21 +1,21 @@
 ---
 layout: default
 class: home
+slides:
+  - image_path: /assets/images/1.png
+  - image_path: /assets/images/2.png
+  - image_path: /assets/images/3.png
+  - image_path: /assets/images/4.png
+  - image_path: /assets/images/5.png
 ---
 
-  <section class="body">
+  <section id="main-carousel">
 
-<!--     <h1 class="">Hello World.</h1>
-
-    <div href="#" class="link dim black mw5 dt hide-child ba b--black-20 pa4 br2 pointer">
-      Add pointer on hover to element.
+    <div class="main-carousel">
+      {% for image in page.slides%}
+      <div class="item" style="background-image: url({{ image.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+      </div>
+      {% endfor %}
     </div>
-
-    <a class="grow dib f3-ns no-underline bg-pink black-90 pa5" href="#">
-        Portfolio Project #11
-    </a> -->
-
-
-
   </section>
 
