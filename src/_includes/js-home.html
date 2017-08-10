@@ -10,16 +10,19 @@
     }).register("screen and (min-width: 960px)", {
       match : function() {
         var headHeight = $('#header').outerHeight();
+        var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
-        var maxHeight = winHeight - headHeight;
-        $('#main-carousel').height(maxHeight);
+        var maxHeight = winHeight - headHeight - navHeight;
+        // $('#main-carousel').height(maxHeight);
         $('.main-carousel .item').each(function(){
           $(this).height(maxHeight);
         })
         $('.main-carousel').flickity({
           // options
           cellAlign: 'left',
-          contain: true
+          contain: true,
+          wrapAround: true,
+          // setGallerySize: true,
         });
       },
       unmatch : function() {

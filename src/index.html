@@ -2,20 +2,39 @@
 layout: default
 class: home
 slides:
-  - image_path: /assets/images/1.png
-  - image_path: /assets/images/2.png
-  - image_path: /assets/images/3.png
-  - image_path: /assets/images/4.png
   - image_path: /assets/images/5.png
+    headline: 'Where the charm of old New York meets 21st century style.'
+    subheadline: 'Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.'
+  - image_path: /assets/images/2.png
+    headline:
+    subheadline:
+  - image_path: /assets/images/3.png
+    headline:
+    subheadline:
+  - image_path: /assets/images/4.png
+    headline:
+    subheadline:
+  - image_path: /assets/images/1.png
+    headline:
+    subheadline:
 ---
 
   <section id="main-carousel">
-
     <div class="main-carousel">
-      {% for image in page.slides%}
-      <div class="item" style="background-image: url({{ image.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+      {% for slide in page.slides %}
+      <div class="item" style="background: {% if slide.headline or slide.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .4),rgba(60, 13, 5, .4)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+        <div class="center mw5 mw7-ns tc | agendalight headline">
+          <h4 class="f1 lh-title mb1 | brand-cream">{{slide.headline}}</h4>
+          <p class="f3 lh-title | brand-cream">{{slide.subheadline}}</p>
+        </div>
       </div>
       {% endfor %}
+    </div>
+  </section>
+  <section id="about" class="bg-brand-cream callunalight text-dark">
+    <div class="center mw5 mw8-ns pv5">
+        <p class="f2 lh-title">Versatile, elegant and timeless, Aretsky’s Patroon features multiple private dining waiting to be transformed by your personal touch, whether you are having an intimate dinner or using the entire townhouse for a private event.</p>
+        <p class="f3 lh-copy">With impeccable service, a familial staff and a menu of seasonal American favorites, Aretsky’s Patroon elevates the every day to the extraordinary. It’s no wonder that it has become a sought-after destination for a discerning midtown audience.</p>
     </div>
   </section>
 

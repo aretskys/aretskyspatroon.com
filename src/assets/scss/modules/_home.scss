@@ -3,6 +3,11 @@
     .main-carousel {
       .item {
         width: 100%;
+        .headline {
+          position: relative;
+          top: 40%;
+          transform: translateY(-40%);
+        }
       }
     }
 

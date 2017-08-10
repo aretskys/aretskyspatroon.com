@@ -1,7 +1,7 @@
 $brand-brown: #3C0D05;
 $brand-red: #D63236;
 $brand-cream: #fefdf5;
-$text-dark: rgba(0,0,0,.8);
+$text-dark: rgba(60,13,5,1);
 $text-light: #fdfcf3;
 
 .brand-brown {
@@ -23,4 +23,12 @@ $text-light: #fdfcf3;
 }
 .bg-brand-red {
   background-color: $brand-red;
+}
+
+.text-dark {
+  color: $text-dark;
+}
+
+.text-light {
+  color: $text-light;
 }
