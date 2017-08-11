@@ -7643,6 +7643,17 @@ template {
     top: 40%;
     transform: translateY(-40%); }
 
+.home .ot-powered-by {
+  display: none; }
+
+.home .ot-dtp-picker.wide {
+  width: 52em;
+  margin-right: auto;
+  margin-left: auto; }
+
+.home .ot-title {
+  display: none; }
+
 header {
   padding-bottom: 0; }
 
