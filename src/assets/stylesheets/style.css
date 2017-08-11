@@ -7654,6 +7654,18 @@ template {
 .home .ot-title {
   display: none; }
 
+.home .ot-dtp-picker .ot-dtp-picker-button {
+  height: 100% !important; }
+
+.home .ot-time-picker > select {
+  left: 0; }
+
+.home [data-panes] > * {
+  display: none; }
+
+.home [data-panes] > .active {
+  display: block; }
+
 header {
   padding-bottom: 0; }
 

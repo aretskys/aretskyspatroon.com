@@ -18,6 +18,70 @@ slides:
     headline:
     subheadline:
 reservation_background_image: /uploads/bg-book.jpg
+menus:
+  - menu_name: Lunch
+    sections:
+      - section_name: raw
+        items:
+          - item_name: CHILLED LITTLENECK CLAMS
+            item_price:
+            market_price: true
+            item_details:
+            meat_or_fish: true
+          - item_name: SHRIMP COCKTAIL
+            item_price: 19
+            market_price:
+            market_price:
+            item_details:
+            meat_or_fish: true
+          - item_name: ASSORTED EAST & WEST COAST OYSTERS
+            item_price:
+            market_price: true
+            item_details:
+            meat_or_fish: true
+      - section_name: toast
+        items:
+          - item_name: PROSCIUTTO & AVOCADO
+            item_price: 17
+            market_price:
+            item_details: sunflower-cilantro pesto, sourdough
+            meat_or_fish:
+          - item_name: SCOTTISH SALMON
+            item_price: 17
+            market_price:
+            item_details: cured scottish salmon, cucumber, horseradish sour cream, black bread
+            meat_or_fish: true
+          - item_name: ROASTED CHANTERELLE
+            item_price: 17
+            market_price:
+            item_details: chanterelle, creme fraiche, sourdough
+            meat_or_fish:
+  - menu_name: dinner
+    sections:
+      - section_name: small bites
+        items:
+          - item_name: fried oysters
+            item_price: 11
+            market_price:
+            item_details: tartar sauce
+            meat_or_fish: true
+          - item_name: CHICKEN & FOIE GRAS MEATBALLS
+            item_price: 11
+            market_price:
+            item_details: tapple calvados chutney
+            meat_or_fish: true
+      - section_name: raw
+        items:
+          - item_name: hamachi
+            item_price: 19
+            market_price:
+            item_details:  watermelon-habanero granita, fennel & shiso salad
+            meat_or_fish: true
+          - item_name: 19 SEARED YELLOWFIN TUNA
+            item_price: 19
+            market_price:
+            item_details:  hearts of palm, avocado, ginger-soy
+            meat_or_fish: true
 ---
 
   <section id="main-carousel">
@@ -42,7 +106,27 @@ reservation_background_image: /uploads/bg-book.jpg
   <section id="book" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .4)),url({{ page.reservation_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover"">
     <div class="center mw5 mw8-ns pt5 pb6 tc">
       <p class="f4 mb4 tracked ttu | agendamedium brand-cream">book a table</p>
-      <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en&overlay=false&iframe=false'></script>
+      <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en&overlay=&iframe='></script>
+    </div>
+  </section>
+
+  <section id="menus">
+    <div class="center mw5 mw8-ns pt5 pb6">
+      <p class="f4 tracked tc ttu | agendamedium">browse our menu</p>
+      <div data-tabs class="flex items-center justify-center mt4 tracked ttu | agendamedium brand-red">
+        {% for menu in page.menus %}
+        <div class="ph3 pointer">{{ menu.menu_name }}</div>
+        {% endfor %}
+      </div>
+
+      <div data-panes>
+        <div class="pa3 bg-yellow">Lunch content...</div>
+        <div class="pa3 bg-yellow">Dinner content...</div>
+        <div class="pa3 bg-yellow">Bar content...</div>
+        <div class="pa3 bg-yellow">Roof content...</div>
+        <div class="pa3 bg-yellow">restaurant week...</div>
+      </div>
+
     </div>
   </section>
 
