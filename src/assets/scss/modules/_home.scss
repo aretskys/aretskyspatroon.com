@@ -10,8 +10,16 @@
         }
       }
     }
+  }
 
-
+  section#menus {
+    .single-menu {
+      border: 4px solid red;
+      columns: 300px 2;
+    }
+    .menu-section {
+      break-inside: avoid;
+    }
   }
 
   .ot-powered-by {

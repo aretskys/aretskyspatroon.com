@@ -120,11 +120,20 @@ menus:
       </div>
 
       <div data-panes>
-        <div class="pa3 bg-yellow">Lunch content...</div>
-        <div class="pa3 bg-yellow">Dinner content...</div>
-        <div class="pa3 bg-yellow">Bar content...</div>
-        <div class="pa3 bg-yellow">Roof content...</div>
-        <div class="pa3 bg-yellow">restaurant week...</div>
+        {% for menu in page.menus %}
+          <div class="pa3 | agendalight single-menu">
+          {% for section in menu.sections %}
+            <div class="bg-yellow | menu-section">
+              <h5 class="f4 mt0 ttc">{{ section.section_name }}</h5>
+              {% for item in section.items %}
+                <p>{{ item.item_price }}</p>
+                <p class="ttu">{{ item.item_name }}</p>
+                <p class="i">{{ item.item_details }}</p>
+              {% endfor %}
+            </div>
+          {% endfor %}
+          </div>
+        {% endfor %}
       </div>
 
     </div>
