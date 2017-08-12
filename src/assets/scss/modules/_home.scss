@@ -1,12 +1,20 @@
 .home {
+
+  main {
+    margin-top: 136px;
+  }
+
   section#main-carousel {
     .main-carousel {
       .item {
         width: 100%;
+        img {
+          height: 150px;
+        }
         .headline {
           position: relative;
-          top: 40%;
-          transform: translateY(-40%);
+          top: 30%;
+          transform: translateY(-30%);
         }
       }
     }

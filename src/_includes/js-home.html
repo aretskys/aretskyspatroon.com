@@ -12,9 +12,9 @@
     }).register("screen and (min-width: 960px)", {
       match : function() {
         var headHeight = $('#header').outerHeight();
-        var navHeight = $('#nav').outerHeight();
+        // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
-        var maxHeight = winHeight - headHeight - navHeight;
+        var maxHeight = winHeight - headHeight;
         // $('#main-carousel').height(maxHeight);
         $('.main-carousel .item').each(function(){
           $(this).height(maxHeight);

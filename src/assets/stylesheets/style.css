@@ -7127,7 +7127,7 @@ http://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 .flickity-prev-next-button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 44px;
   height: 44px;
   border: none;
@@ -7613,35 +7613,46 @@ template {
   display: none; }
 
 #header {
-  height: 100px; }
-  #header #header__book {
-    margin-top: 1.7rem; }
-  #header .social {
-    height: 100px; }
-    #header .social a {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); }
-      #header .social a img {
-        height: 100%; }
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0; }
+  #header .header-main {
+    height: 80px;
+    z-index: 9; }
+    #header .header-main #header__book {
+      margin-top: 1rem; }
+    #header .header-main .social {
+      height: 80px; }
+      #header .header-main .social a {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        #header .header-main .social a img {
+          height: 100%; }
+  #header .header-nav {
+    height: 3.5rem; }
+    #header .header-nav .navitem {
+      color: #fdfcf3;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 1.4em 0;
+      transition: color 0.1s; }
+      #header .header-nav .navitem:hover {
+        color: #D63236; }
 
-#nav {
-  height: 3.5rem; }
-  #nav .navitem {
-    color: #fdfcf3;
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 1.4em 0;
-    transition: color 0.1s; }
-    #nav .navitem:hover {
-      color: #D63236; }
+.home main {
+  margin-top: 136px; }
 
 .home section#main-carousel .main-carousel .item {
   width: 100%; }
+  .home section#main-carousel .main-carousel .item img {
+    height: 150px; }
   .home section#main-carousel .main-carousel .item .headline {
     position: relative;
-    top: 40%;
-    transform: translateY(-40%); }
+    top: 30%;
+    transform: translateY(-30%); }
 
 .home section#menus .single-menu {
   border: 4px solid red;
@@ -7726,7 +7737,7 @@ http://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 .flickity-prev-next-button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 44px;
   height: 44px;
   border: none;

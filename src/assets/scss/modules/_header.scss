@@ -1,34 +1,43 @@
 #header {
-  height: 100px;
-  img.logo {
-    // height: 100%;
-  }
-  #header__book {
-    margin-top: 1.7rem;
-    // @include vertical-align();
-  }
-  .social {
-    height: 100px;
-    a {
-      @include vertical-align();
-      // height: 30px;
-      img {
-        height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  .header-main {
+    height: 80px;
+    z-index: 9;
+    // img.logo {
+    //   height: 40%;
+    //   @include vertical-align();
+    //   margin-left: 4rem;
+    // }
+    #header__book {
+      margin-top: 1rem;
+      // @include vertical-align();
+    }
+    .social {
+      height: 80px;
+      a {
+        @include vertical-align();
+        // height: 30px;
+        img {
+          height: 100%;
+        }
       }
     }
   }
-}
-
-#nav {
-  height: 3.5rem;
-  .navitem {
-    color: $text-light;
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 1.4em 0;
-    transition: color 0.1s;
-    &:hover {
-      color: $brand-red;
+  .header-nav {
+    height: 3.5rem;
+    .navitem {
+      color: $text-light;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 1.4em 0;
+      transition: color 0.1s;
+      &:hover {
+        color: $brand-red;
+      }
     }
   }
 }
