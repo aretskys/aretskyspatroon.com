@@ -979,14 +979,16 @@ menus:
         {% for menu in page.menus %}
           <div class="pa3 | agendalight single-menu">
           {% for section in menu.sections %}
-            <div class="bg-yellow | menu-section">
-              <h5 class="f4 mt0 ttc">{{ section.section_name }}</h5>
-              {% for item in section.items %}
-                <p>{{ item.item_price }}</p>
-                <p class="ttu">{{ item.item_name }}</p>
-                <p class="i">{{ item.item_details }}</p>
-              {% endfor %}
-            </div>
+            {% if section.items[0].item_name %}
+              <div class="bg-yellow | menu-section">
+                <h5 class="f4 mt0 ttc">{{ section.section_name }}</h5>
+                {% for item in section.items %}
+                  <p>{{ item.item_price }}</p>
+                  <p class="ttu">{{ item.item_name }}</p>
+                  <p class="i">{{ item.item_details }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
           {% endfor %}
           </div>
         {% endfor %}
