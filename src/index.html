@@ -3,7 +3,7 @@ layout: default
 class: home
 slides:
   - image_path: /uploads/slide-5.png
-    headline: Where the charm of old New York meets 21st century style.
+    headline: At Aretsky's Patroon, the charm of old New York meets 21st century style.
     subheadline:
   - image_path: /uploads/slide-2.png
     headline:
@@ -18,6 +18,7 @@ slides:
     headline:
     subheadline:
 reservation_background_image: /uploads/bg-book.jpg
+events_background_image: /uploads/bg-events.jpg
 menus:
   - menu_name: Lunch
     sections:
@@ -59,12 +60,12 @@ menus:
             meat_or_fish: false
       - section_name: Appetizers
         items:
-          - item_name: JUMBO LUMP CRAB CAKES*
+          - item_name: JUMBO LUMP CRAB CAKES
             item_price: '19'
             market_price: false
             item_details: lobster tarragon aioli
             meat_or_fish: true
-          - item_name: HAND CUT STEAK TARTARE*
+          - item_name: HAND CUT STEAK TARTARE
             item_price: '19'
             market_price: false
             item_details: 'quail egg, crostini, mustard green'
@@ -91,17 +92,17 @@ menus:
             market_price: false
             item_details: 'kale, roasted tomato, crispy shallot, truffled mayonnaise'
             meat_or_fish: false
-          - item_name: PRIME DRY AGED BURGER*
+          - item_name: PRIME DRY AGED BURGER
             item_price: '25'
             market_price: false
             item_details: 'sautéed onion, roasted tomato, hand cut fries'
             meat_or_fish: true
-          - item_name: SEARED YELLOWFIN TUNA BURGER*
+          - item_name: SEARED YELLOWFIN TUNA BURGER
             item_price: '26'
             market_price: false
             item_details: yucca fries
             meat_or_fish: true
-          - item_name: LOBSTER BLT*
+          - item_name: LOBSTER BLT
             item_price: '32'
             market_price: false
             item_details: 'avocado, spicy mayonnaise, mango-jicama slaw'
@@ -151,7 +152,7 @@ menus:
               grilled flatbread, smoked eggplant, summer squash, baby gem &
               endive
             meat_or_fish: true
-          - item_name: CHOPPED VEGETABLE SALAD*
+          - item_name: CHOPPED VEGETABLE SALAD
             item_price: '22'
             market_price: false
             item_details: >-
@@ -253,7 +254,7 @@ menus:
             market_price: false
             item_details: 'citrus rice cake, jalapeno yuzu jelly'
             meat_or_fish: true
-          - item_name: LOBSTER NEWBERG*
+          - item_name: LOBSTER NEWBERG
             item_price: '11'
             market_price: false
             item_details: 'puff pastry, creme fraiche, caviar'
@@ -499,17 +500,17 @@ menus:
       - section_name: Sliders & Rolls
         items:
           - item_name: PULLED PORK SLIDER
-            item_price: 7 ea
+            item_price: 7ea
             market_price: false
             item_details: mango-jicama slaw
             meat_or_fish: true
           - item_name: BEEF SLIDER
-            item_price: 8 ea
+            item_price: 8ea
             market_price: false
             item_details: 'cheddar, bread & butter pickles'
             meat_or_fish: true
           - item_name: CRAB CAKE SLIDER
-            item_price: 9 ea
+            item_price: 9ea
             market_price: false
             item_details: 'bacon, lobster tarragon aioli'
             meat_or_fish: true
@@ -729,7 +730,7 @@ menus:
             market_price: false
             item_details: '“Villa di Capezzana,” Tenuta di Capezzana, Tuscany, Italy, 2010'
             meat_or_fish: false
-  - menu_name: roof
+  - menu_name: rooftop
     sections:
       - section_name: Snacks
         items:
@@ -899,7 +900,7 @@ menus:
             meat_or_fish: false
       - section_name: White
         items:
-          - item_name: Sauvi gnon Blanc
+          - item_name: Sauvignon Blanc
             item_price: 15/58
             market_price: false
             item_details: 'Tablelands, East Coast, New Zealand, 2016'
@@ -979,14 +980,15 @@ menus:
     <div class="main-carousel">
       {% for slide in page.slides %}
       <div class="item" style="background: {% if slide.headline or slide.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .4),rgba(60, 13, 5, .4)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
-        <div class="center mw5 mw7-ns tc | callunalight headline">
-          <h4 class="f1 lh-title mb1 | brand-cream">{{slide.headline}}</h4>
-          <p class="f3 lh-title | brand-cream">{{slide.subheadline}}</p>
+        <div class="center mw5 mw8-ns tc | callunalight headline">
+          <h4 class="mb0 | brand-cream">{{slide.headline}}</h4>
+          <p class="center f3 lh-title mw7-ns | brand-cream">{{slide.subheadline}}</p>
         </div>
       </div>
       {% endfor %}
     </div>
   </section>
+
   <section id="about" class="bg-brand-cream callunalight text-dark">
     <div class="center mw5 mw8-ns pv5 tc">
         <p class="f4 tracked ttu | agendamedium">about us</p>
@@ -994,33 +996,42 @@ menus:
         <p class="f2 lh-title">Versatile, elegant and timeless, Aretsky’s Patroon features multiple private dining rooms waiting to be transformed by your personal touch, whether you are having an intimate dinner or using the entire townhouse for a private event.</p>
     </div>
   </section>
-  <section id="book" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .4)),url({{ page.reservation_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover"">
-    <div class="center mw5 mw8-ns pt5 pb6 tc">
-      <p class="f4 mb4 tracked ttu | agendamedium brand-cream">book a table</p>
-      <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en&overlay=&iframe='></script>
+
+  <section id="book" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .4)),url({{ page.reservation_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+    <div class="center mw5 mw8-ns pv5 tc">
+      <div class="mt4 mb5">
+        <p class="f4 mb4 tracked ttu | agendamedium brand-cream">book a table</p>
+        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en&overlay=&iframe='></script>
+      </div>
+
     </div>
   </section>
 
-  <section id="menus">
-    <div class="center mw5 mw8-ns pt5 pb6">
-      <p class="f4 tracked tc ttu | agendamedium">browse our menu</p>
-      <div data-tabs class="flex items-center justify-center mt4 tracked ttu | agendamedium brand-red">
+  <section id="menus" class="| bg-brand-cream text-dark">
+    <div class="center mw5 mw8-ns pv5">
+      <p class="f4 tracked tc ttu | agendamedium">browse our menus</p>
+      <div data-tabs class="flex items-center justify-center mv4 tracked ttu | agendamedium">
         {% for menu in page.menus %}
-        <div class="ph3 pointer">{{ menu.menu_name }}</div>
+        <div class="ph3 mh2 pv2 ph1 pointer | bg-brand-brown menu-name text-light">{{ menu.menu_name }}</div>
         {% endfor %}
       </div>
-
       <div data-panes>
         {% for menu in page.menus %}
           <div class="pa3 | agendalight single-menu">
           {% for section in menu.sections %}
             {% if section.items[0].item_name %}
-              <div class="bg-yellow | menu-section">
-                <h5 class="f4 mt0 ttc">{{ section.section_name }}</h5>
+              <div class=" | menu-section">
+                <h5 class="bb bw3 f4 ma0 pb2 tracked ttc | text-dark">{{ section.section_name }}</h5>
                 {% for item in section.items %}
-                  <p>{{ item.item_price }}</p>
-                  <p class="ttu">{{ item.item_name }}</p>
-                  <p class="i">{{ item.item_details }}</p>
+                  <div class="item">
+                    {% if item.market_price %}
+                      <p class="mt2 mb1 dib | agendamedium">mp</p>
+                    {% else %}
+                      <p class="mt2 mb1 dib | agendamedium">{{ item.item_price }}</p>
+                    {% endif %}
+                    <p class="mt2 mb1 dib ttu">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>
+                    <p class="i mt0 mb1 ">{{ item.item_details }}</p>
+                  </div>
                 {% endfor %}
               </div>
             {% endif %}
@@ -1028,7 +1039,53 @@ menus:
           </div>
         {% endfor %}
       </div>
-
+      <div class="agendalight center mt3 tc">* Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness</div>
     </div>
+  </section>
+
+  <section id="events" class="pv6 | bg-brand-cream brand-cream callunalight" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .6)),url({{ page.events_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+    <div class="center mw5 mw8-ns tc">
+        <p class="f4 tracked ttu | agendamedium">events &amp; weddings</p>
+        <p class="f2 lh-title">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
+        <p class="f2 lh-title">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
+        <div class="flex items-center justify-center mv4 tracked ttu | agendamedium">
+          <div class="ph3 mh2 pv2 ph1 pointer w5 | bg-brand-brown cta text-light">One-sheet</div>
+          <div class="ph3 mh2 pv2 ph1 pointer w5 | bg-brand-brown cta text-light">Plan your event</div>
+        </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="fl w-100 | bg-brand-cream text-dark">
+      <div class="center mw5 mw8-ns pv5">
+        <p class="f4 tc tracked ttu | agendamedium">Contact</p>
+        <div class="fl w-60 pr5">
+          <div class="mt0 mb4">
+            <p class="f3 | address callunalight">160 East 46th Street<br />New York, NY 10017</p>
+          </div>
+          <p class="f3 mb0 | callunalight"><span class="f5 tracked ttu | agendabold">phone </span>(212) 883-7373</p>
+          <p class="f3 mt0 | callunalight"><span class="f5 tracked ttu | agendabold">fax </span>(212) 883-1118</p>
+
+          <div class="mv4">
+            <p class="f3 callunalight">Aretsky's Patroon is open Monday through Friday for lunch, dinner and rooftop cocktails. On weekends, we are open for private events only.</p>
+          </div>
+
+          <p class="f5 mb2 tracked ttu | agendabold">Monday &ndash; Friday</p>
+          <div class="f3 fl mb0 w-40 | callunalight">Lunch:</div><div class="f3 fl mb0 w-60 | callunalight">11:45am – 2:45pm</div>
+          <div class="f3 fl mb0 w-40 | callunalight">Dinner:</div><div class="f3 fl mb0 w-60 | callunalight">5:30 – 10:00pm</div>
+          <div class="f3 fl mb0 w-40 | callunalight">Bar:</div><div class="f3 fl mb0 w-60 | callunalight">Noon - 10pm</div>
+          <div class="f3 fl mb0 w-40 | callunalight">Rooftop Lunch:</div><div class="f3 fl mb0 w-60 | callunalight">11:45am - 2:45pm</div>
+          <div class="f3 fl mb0 w-40 | callunalight">Rooftop Terrace:</div><div class="f3 fl mb0 w-60 | callunalight">4 - 10pm</div>
+        </div>
+        <div class="fl w-40 pl5">
+          <img src="/uploads/map.png">
+          <div class="mv4">
+            <p class="f3 callunalight">Accessible by the 4, 5, 6, 7, and S at Grand Central Station. Several parking garages are located nearby, with one across the street.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </section>
 

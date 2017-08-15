@@ -1,8 +1,8 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: Boilerplate
-description: This is zombocom. You can do anything at zombocom, anything at all.
-url: http://www.example.com
+title: Aretky's Patroon
+description: Fine dining and events in an iconic Manhattan townhouse.
+url: http://www.aretskyspatroon.com
 
 # CloudCannon uses these:
 source: src

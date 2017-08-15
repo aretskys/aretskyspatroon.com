@@ -7638,7 +7638,8 @@ template {
       font-size: 15px;
       letter-spacing: 1px;
       padding: 1.4em 0;
-      transition: color 0.1s; }
+      transition: color 0.1s;
+      outline: 0; }
       #header .header-nav .navitem:hover {
         color: #D63236; }
 
@@ -7653,15 +7654,41 @@ template {
     position: relative;
     top: 30%;
     transform: translateY(-30%); }
+    .home section#main-carousel .main-carousel .item .headline h4 {
+      font-size: 4rem;
+      font-weight: normal; }
 
 .home section#menus .single-menu {
-  border: 4px solid red;
   -moz-columns: 300px 2;
        columns: 300px 2; }
+
+.home section#menus .menu-name.active {
+  background-color: #D63236; }
+
+.home section#menus .menu-name {
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: background-color 0.1s; }
+  .home section#menus .menu-name:hover {
+    background-color: #D63236; }
 
 .home section#menus .menu-section {
   page-break-inside: avoid;
        break-inside: avoid; }
+  .home section#menus .menu-section h5 {
+    border-color: #D63236; }
+  .home section#menus .menu-section .item:first-of-type {
+    margin-top: 1rem; }
+  .home section#menus .menu-section .item:last-of-type {
+    margin-bottom: 2rem; }
+
+.home #events .cta {
+  font-size: 15px;
+  letter-spacing: 1px;
+  outline: 0;
+  transition: background-color 0.1s; }
+  .home #events .cta:hover {
+    background-color: #D63236; }
 
 .home .ot-powered-by {
   display: none; }
