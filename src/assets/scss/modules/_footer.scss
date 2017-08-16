@@ -1,5 +1,9 @@
 @import "modules/mixins";
 
 footer {
-
+  clear: left;
+  img {
+    @include vertical-align();
+    max-height: 50%;
+  }
 }

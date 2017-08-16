@@ -7677,6 +7677,8 @@ template {
        break-inside: avoid; }
   .home section#menus .menu-section h5 {
     border-color: #D63236; }
+  .home section#menus .menu-section .item {
+    font-size: 17px; }
   .home section#menus .menu-section .item:first-of-type {
     margin-top: 1rem; }
   .home section#menus .menu-section .item:last-of-type {
@@ -7689,6 +7691,12 @@ template {
   transition: background-color 0.1s; }
   .home #events .cta:hover {
     background-color: #D63236; }
+
+.home #contact .contact-text {
+  font-size: 21px; }
+
+.home #contact .heading {
+  font-size: 15px; }
 
 .home .ot-powered-by {
   display: none; }
@@ -7723,6 +7731,14 @@ main {
 footer {
   padding-top: 0;
   padding-bottom: 0; }
+
+footer {
+  clear: left; }
+  footer img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 50%; }
 
 /*! Flickity v2.0.9
 http://flickity.metafizzy.co
