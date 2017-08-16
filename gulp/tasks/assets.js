@@ -27,6 +27,7 @@ gulp.task('scripts', () =>
     'node_modules/jquery/dist/jquery.js',
     'src/assets/javascript/imagesloaded.js',
     'src/assets/javascript/flickity.js',
+    'src/assets/javascript/remodal.js',
     'src/assets/javascript/tabbis.js',
     'src/assets/javascript/enquire.js',
     'node_modules/imgix.js/dist/imgix.js',
