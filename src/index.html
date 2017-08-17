@@ -1,9 +1,13 @@
 ---
 layout: default
 class: home
+carousel:
+  logo_path: uploads/logo-new.png
+  headline: At Aretsky's Patroon, the charm of old New York meets 21st century style.
+  subheadline:
 slides:
   - image_path: /uploads/slide-5.png
-    headline: At Aretsky's Patroon, the charm of old New York meets 21st century style.
+    headline:
     subheadline:
   - image_path: /uploads/slide-2.png
     headline:
@@ -976,14 +980,15 @@ menus:
             meat_or_fish: false
 ---
 
-  <section id="main-carousel">
+  <section id="main-carousel" class="relative">
+    <div class="absolute center left-0 right-0 mw5 mw8-ns tc z-2 | callunalight headline">
+      <img class="" src="{{page.carousel.logo_path}}">
+      <h4 class="mb0 | brand-cream">{{page.carousel.headline}}</h4>
+      <p class="center f3 lh-title mw7-ns | brand-cream">{{page.carousel.subheadline}}</p>
+    </div>
     <div class="main-carousel">
       {% for slide in page.slides %}
-      <div class="item" style="background: {% if slide.headline or slide.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .4),rgba(60, 13, 5, .4)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
-        <div class="center mw5 mw8-ns tc | callunalight headline">
-          <h4 class="mb0 | brand-cream">{{slide.headline}}</h4>
-          <p class="center f3 lh-title mw7-ns | brand-cream">{{slide.subheadline}}</p>
-        </div>
+      <div class="item" style="background: {% if page.carousel.logo_path or page.carousel.headline or page.carousel.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .5),rgba(60, 13, 5, .5)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
       </div>
       {% endfor %}
     </div>
@@ -1049,9 +1054,9 @@ menus:
         <p class="f2 lh-title">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
         <p class="f2 lh-title">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
         <div class="flex items-center justify-center mv4 tracked ttu | agendamedium">
-          <a href="" class="link ph3 mh2 pv2 ph1 pointer w5 | bg-brand-brown cta text-light">One-sheet</a>
-          <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv2 ph1 pointer w5 | bg-brand-brown cta text-light">Virtual Tour</a>
-          <a data-remodal-target="modal" class="link ph3 mh2 pv2 ph1 pointer w5 | bg-brand-brown cta text-light">Plan your event</a>
+          <a href="" class="link ph3 mh2 pv3 ph1 pointer w5 | bg-brand-brown cta text-light">One-sheet</a>
+          <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv3 ph1 pointer w5 | bg-brand-brown cta text-light">Virtual Tour</a>
+          <a data-remodal-target="modal" class="link ph3 mh2 pv3 ph1 pointer w5 | bg-brand-brown cta text-light">Plan your event</a>
         </div>
     </div>
   </section>

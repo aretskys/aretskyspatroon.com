@@ -30,6 +30,7 @@ gulp.task('scripts', () =>
     'src/assets/javascript/remodal.js',
     'src/assets/javascript/tabbis.js',
     'src/assets/javascript/enquire.js',
+    'src/assets/javascript/smooth-scroll.js',
     'node_modules/imgix.js/dist/imgix.js',
     'src/assets/javascript/main.js'
   ])

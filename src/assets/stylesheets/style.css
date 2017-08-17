@@ -7614,7 +7614,6 @@ template {
 
 #header {
   position: fixed;
-  z-index: 999;
   top: 0;
   left: 0;
   right: 0; }
@@ -7648,15 +7647,16 @@ template {
 
 .home section#main-carousel .main-carousel .item {
   width: 100%; }
-  .home section#main-carousel .main-carousel .item img {
-    height: 150px; }
-  .home section#main-carousel .main-carousel .item .headline {
-    position: relative;
-    top: 30%;
-    transform: translateY(-30%); }
-    .home section#main-carousel .main-carousel .item .headline h4 {
-      font-size: 4rem;
-      font-weight: normal; }
+
+.home section#main-carousel img {
+  height: 150px; }
+
+.home section#main-carousel .headline {
+  top: 30%;
+  transform: translateY(-30%); }
+  .home section#main-carousel .headline h4 {
+    font-size: 4rem;
+    font-weight: normal; }
 
 .home section#menus .single-menu {
   -moz-columns: 300px 2;
@@ -7721,6 +7721,8 @@ template {
     margin-bottom: 4px;
     margin-top: 8px;
     text-transform: uppercase; }
+  .home .remodal main p.agendamedium {
+    font-family: "Agenda Medium"; }
   .home .remodal main input {
     padding: .75rem .5rem;
     box-shadow: none !important;
@@ -7878,7 +7880,7 @@ html.remodal-is-locked {
 
 /* Default theme styles of the overlay */
 .remodal-overlay {
-  background: rgba(43, 46, 56, 0.9); }
+  background: rgba(60, 13, 5, 0.75); }
 
 .remodal-overlay.remodal-is-opening,
 .remodal-overlay.remodal-is-closing {

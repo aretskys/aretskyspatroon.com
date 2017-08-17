@@ -2,8 +2,22 @@
 
   var tabs = tabbis.init();
 
+  var setScrollOffset = function() {
+    // smoothscroll
+    var headerHeight = $('#header').height();
+    // var topPadding = $('#about').css('padding-top');
+    // var topPaddingNum = parseInt(topPadding);
+    // console.log('topPadding:' + topPadding + ', headerHeight:' + headerHeight);
+    $('#header a').smoothScroll({offset: -headerHeight});
+    // $('header a.video').smoothScroll({offset: -headerHeight});
+    // $('a.arrow').smoothScroll({offset: 0});
+    // $('a.awards').smoothScroll({offset: 0});
+    $('#footer-link').smoothScroll({offset: -headerHeight});
+  }
+
   $(document).ready(function() {
     var windowWidth = $(window).width();
+    setScrollOffset();
     // media query(s)
     enquire.register("screen and (min-width: 480px)", {
       match : function() {
@@ -24,6 +38,7 @@
           cellAlign: 'left',
           contain: true,
           wrapAround: true,
+          draggable: false,
           // setGallerySize: true,
         });
       },
