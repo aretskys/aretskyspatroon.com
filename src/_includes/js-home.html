@@ -1,5 +1,19 @@
 <script>
 
+  // window.onscroll = function changeClass(){
+  //   var scrollPosY = window.pageYOffset | document.body.scrollTop;
+  //   var icon = document.getElementById('icon'),
+  //       logo = document.getElementById('logo');
+
+  //   if(scrollPosY > 300) {
+  //       logo.className = ('absolute | logo');
+  //       icon.className = ('absolute | hide icon');
+  //     } else if(scrollPosY <= 300) {
+  //       logo.className = ('absolute | hide logo');
+  //       icon.className = ('absolute | icon');
+  //     }
+  // }
+
   var tabs = tabbis.init();
 
   var setScrollOffset = function() {
@@ -45,6 +59,15 @@
       unmatch : function() {
       }
     });
+
+    var setActiveMenu = function(){
+      $('.menu-name').removeClass('active');
+      $('.single-menu').removeClass('active');
+      $('.menu-name').first().addClass('active');
+      $('.single-menu').first().addClass('active');
+    }
+    setActiveMenu();
+
   });
 
 </script>

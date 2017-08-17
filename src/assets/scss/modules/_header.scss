@@ -6,11 +6,26 @@
   .header-main {
     height: 80px;
     z-index: 9;
-    // img.logo {
-    //   height: 40%;
-    //   @include vertical-align();
-    //   margin-left: 4rem;
-    // }
+    img.hide {
+      transition: opacity 0.25s;
+      opacity: 0 !important;
+    }
+    img.icon {
+      transition: opacity 0.25s;
+      height: 40%;
+      padding-top: 1.5rem;
+      // @include vertical-align(absolute);
+      margin-left: 3rem;
+      opacity: 1;
+      // animation-duration: 0.7s !important;
+    }
+    img.logo {
+      transition: opacity 0.25s;
+      height: 60%;
+      @include vertical-align(absolute);
+      margin-left: 3rem;
+      opacity: 1;
+    }
     #header__book {
       margin-top: 1rem;
       // @include vertical-align();
