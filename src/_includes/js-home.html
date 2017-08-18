@@ -34,6 +34,21 @@
     }).register("screen and (max-width: 768px)", {
       match: function() {
         // mobile nav horizontal scroll
+        // https://benfrain.com/a-horizontal-scrolling-navigation-pattern-for-touch-and-mouse-with-moving-current-indicator/
+        var navwrapper = document.getElementById("nav-wrapper");
+        var nav = document.getElementById("nav");
+        nav.className = 'fl';
+        navwrapper.setAttribute("data-overflowing", determineOverflow(nav, navwrapper));
+
+        var SETTINGS = {
+          navBarTravelling: false,
+          navBarDirection: "",
+          navBarTravelDistance: 150
+        }
+
+        var advancerleft = document.getElementById("advancer-left");
+        var advanceright = document.getElementById("advancer-right");
+
         function determineOverflow(content, container) {
             var containerMetrics = container.getBoundingClientRect();
             var containerMetricsRight = Math.floor(containerMetrics.right);
@@ -52,9 +67,29 @@
             }
         }
 
-        var navwrapper = document.getElementById("nav-wrapper");
+        // overflow? which side?
+        var last_known_scroll_position = 0;
+        var ticking = false;
+
+        function doSomething(scroll_pos) {
+            navwrapper.setAttribute("data-overflowing", determineOverflow(nav, navwrapper));
+        }
+
+        navwrapper.addEventListener("scroll", function() {
+            last_known_scroll_position = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    doSomething(last_known_scroll_position);
+                    ticking = false;
+                });
+            }
+            ticking = true;
+        });
+      }
+    }).register("screen and (min-width: 769px)", {
+      match: function() {
         var nav = document.getElementById("nav");
-        navwrapper.setAttribute("data-overflowing", determineOverflow(nav, navwrapper));
+        nav.className = 'auto center mw9';
       }
     }).register("screen and (min-width: 960px)", {
       match : function() {

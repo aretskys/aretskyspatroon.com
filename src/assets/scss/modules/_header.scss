@@ -40,32 +40,33 @@
       }
     }
   }
-  #nav:before {
-    content:'';
-    height: 100%;
-    width: 10%;
-    display:block;
-    position: absolute;
-    left: 0;
-    // background: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
-  }
+  // #nav:before {
+  //   content:'';
+  //   height: 100%;
+  //   width: 10%;
+  //   display:block;
+  //   position: absolute;
+  //   left: 0;
+  //   background: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  // }
   #nav-wrapper {
+    position: relative;
     height: 3.5rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */
+    &::-webkit-scrollbar {
+        display: none;
+    }
   }
   #nav {
     @media (max-width: 800px) {
-      overflow-x: scroll;
-      white-space: nowrap;
-      /* Make an auto-hiding scroller for the 3 people using a IE */
-      -ms-overflow-style: -ms-autohiding-scrollbar;
-      /* For WebKit implementations, provide inertia scrolling */
-      -webkit-overflow-scrolling: touch;
-      /* We don't want internal inline elements to wrap */
-      white-space: nowrap;
-      /* Remove the default scrollbar for WebKit implementations */
-      &::-webkit-scrollbar {
-          display: none;
-      }
       .navitem {
         display: inline-block;
         height: 100%;
@@ -95,15 +96,46 @@
       }
     }
   }
-  // a i {
-  //   transition: visibility 0s;
-  //   margin-left: .5rem;
-  //   visibility: hidden;
-  //   color: $brand-cream;
-  // }
-  // a:hover i {
-  //   transition: visibility 0.2s;
-  //   visibility: visible;
-  //   color: $brand-cream;
-  // }
+
+  [data-overflowing="both"] ~ .advancer-left,
+  [data-overflowing="left"] ~ .advancer-left {
+    opacity: 1;
+  }
+
+  [data-overflowing="both"] ~ .advancer-right,
+  [data-overflowing="right"] ~ .advancer-right {
+    opacity: 1;
+  }
+
+  .advancer {
+      /* Reset the button */
+      appearance: none;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      &:focus {
+          outline: 0;
+      }
+      /* Now style it as needed */
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      opacity: 0;
+  }
+
+  .advancer-left {
+    left: 3px;
+  }
+
+  .advancer-right {
+    right: 3px;
+  }
+
+  .advancer-icon {
+    width: 20px;
+    height: 44px;
+    fill: #bbb;
+  }
+
+
 }
