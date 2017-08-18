@@ -1,36 +1,35 @@
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  @media (min-width: 769px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   .header-main {
     height: 80px;
     z-index: 9;
-    img.hide {
-      transition: opacity 0.25s;
-      opacity: 0 !important;
-    }
-    img.icon {
-      transition: opacity 0.25s;
-      height: 40%;
-      padding-top: 1.5rem;
-      // @include vertical-align(absolute);
-      margin-left: 3rem;
-      opacity: 1;
-      // animation-duration: 0.7s !important;
-    }
     img.logo {
-      transition: opacity 0.25s;
       height: 60%;
       @include vertical-align(absolute);
       margin-left: 3rem;
-      opacity: 1;
+      @media (max-width: 730px) {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+      }
     }
     #header__book {
       margin-top: 1rem;
+      @media (max-width: 700px) {
+        display: none;
+      }
       // @include vertical-align();
     }
     .social {
+      @media (max-width: 700px) {
+        display: none;
+      }
       height: 80px;
       a {
         @include vertical-align();
@@ -41,17 +40,58 @@
       }
     }
   }
-  .header-nav {
+  #nav:before {
+    content:'';
+    height: 100%;
+    width: 10%;
+    display:block;
+    position: absolute;
+    left: 0;
+    // background: linear-gradient(to right, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  }
+  #nav-wrapper {
     height: 3.5rem;
-    .navitem {
-      color: $text-light;
-      font-size: 15px;
-      letter-spacing: 1px;
-      padding: 1.4em 0;
-      transition: color 0.1s;
-      outline: 0;
-      &:hover {
-        color: $brand-red;
+  }
+  #nav {
+    @media (max-width: 800px) {
+      overflow-x: scroll;
+      white-space: nowrap;
+      /* Make an auto-hiding scroller for the 3 people using a IE */
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      /* For WebKit implementations, provide inertia scrolling */
+      -webkit-overflow-scrolling: touch;
+      /* We don't want internal inline elements to wrap */
+      white-space: nowrap;
+      /* Remove the default scrollbar for WebKit implementations */
+      &::-webkit-scrollbar {
+          display: none;
+      }
+      .navitem {
+        display: inline-block;
+        height: 100%;
+        line-height: 1.6em;
+        color: $text-light;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 1rem;
+        transition: color 0.1s;
+        outline: 0;
+      }
+    }
+    @media (min-width: 801px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .navitem {
+        color: $text-light;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 1.4em 0;
+        transition: color 0.1s;
+        outline: 0;
+        &:hover {
+          color: $brand-red;
+        }
       }
     }
   }

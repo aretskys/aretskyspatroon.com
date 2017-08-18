@@ -1,32 +1,26 @@
 <script>
 
-  // window.onscroll = function changeClass(){
-  //   var scrollPosY = window.pageYOffset | document.body.scrollTop;
-  //   var icon = document.getElementById('icon'),
-  //       logo = document.getElementById('logo');
-
-  //   if(scrollPosY > 300) {
-  //       logo.className = ('absolute | logo');
-  //       icon.className = ('absolute | hide icon');
-  //     } else if(scrollPosY <= 300) {
-  //       logo.className = ('absolute | hide logo');
-  //       icon.className = ('absolute | icon');
-  //     }
-  // }
-
+  // menu tabs
   var tabs = tabbis.init();
 
+  // smooth scroll
   var setScrollOffset = function() {
     // smoothscroll
     var headerHeight = $('#header').height();
     // var topPadding = $('#about').css('padding-top');
     // var topPaddingNum = parseInt(topPadding);
     // console.log('topPadding:' + topPadding + ', headerHeight:' + headerHeight);
-    $('#header a').smoothScroll({offset: -headerHeight});
+    $('#header a').smoothScroll({
+      offset: -headerHeight,
+      easing: 'swing',
+    });
     // $('header a.video').smoothScroll({offset: -headerHeight});
     // $('a.arrow').smoothScroll({offset: 0});
     // $('a.awards').smoothScroll({offset: 0});
-    $('#footer-link').smoothScroll({offset: -headerHeight});
+    $('#footer-link').smoothScroll({
+      offset: -headerHeight,
+      easing: 'swing',
+    });
   }
 
   $(document).ready(function() {
@@ -36,6 +30,31 @@
     enquire.register("screen and (min-width: 480px)", {
       match : function() {
 
+      }
+    }).register("screen and (max-width: 768px)", {
+      match: function() {
+        // mobile nav horizontal scroll
+        function determineOverflow(content, container) {
+            var containerMetrics = container.getBoundingClientRect();
+            var containerMetricsRight = Math.floor(containerMetrics.right);
+            var containerMetricsLeft = Math.floor(containerMetrics.left);
+            var contentMetrics = content.getBoundingClientRect();
+            var contentMetricsRight = Math.floor(contentMetrics.right);
+            var contentMetricsLeft = Math.floor(contentMetrics.left);
+            if (containerMetricsLeft > contentMetricsLeft && containerMetricsRight < contentMetricsRight) {
+                return "both";
+            } else if (contentMetricsLeft < containerMetricsLeft) {
+                return "left";
+            } else if (contentMetricsRight > containerMetricsRight) {
+                return "right";
+            } else {
+                return "none";
+            }
+        }
+
+        var navwrapper = document.getElementById("nav-wrapper");
+        var nav = document.getElementById("nav");
+        navwrapper.setAttribute("data-overflowing", determineOverflow(nav, navwrapper));
       }
     }).register("screen and (min-width: 960px)", {
       match : function() {

@@ -7612,52 +7612,97 @@ template {
 [hidden] {
   display: none; }
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; }
-  #header .header-main {
-    height: 80px;
-    z-index: 9; }
-    #header .header-main img.hide {
-      transition: opacity 0.25s;
-      opacity: 0 !important; }
-    #header .header-main img.icon {
-      transition: opacity 0.25s;
-      height: 40%;
-      padding-top: 1.5rem;
-      margin-left: 3rem;
-      opacity: 1; }
-    #header .header-main img.logo {
-      transition: opacity 0.25s;
-      height: 60%;
-      position: absolute;
+@media (min-width: 769px) {
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; } }
+
+#header .header-main {
+  height: 80px;
+  z-index: 9; }
+  #header .header-main img.logo {
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 3rem; }
+    @media (max-width: 730px) {
+      #header .header-main img.logo {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; } }
+  #header .header-main #header__book {
+    margin-top: 1rem; }
+    @media (max-width: 700px) {
+      #header .header-main #header__book {
+        display: none; } }
+  #header .header-main .social {
+    height: 80px; }
+    @media (max-width: 700px) {
+      #header .header-main .social {
+        display: none; } }
+    #header .header-main .social a {
+      position: relative;
       top: 50%;
-      transform: translateY(-50%);
-      margin-left: 3rem;
-      opacity: 1; }
-    #header .header-main #header__book {
-      margin-top: 1rem; }
-    #header .header-main .social {
-      height: 80px; }
-      #header .header-main .social a {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%); }
-        #header .header-main .social a img {
-          height: 100%; }
-  #header .header-nav {
-    height: 3.5rem; }
-    #header .header-nav .navitem {
+      transform: translateY(-50%); }
+      #header .header-main .social a img {
+        height: 100%; }
+
+#header #nav:before {
+  content: '';
+  height: 100%;
+  width: 10%;
+  display: block;
+  position: absolute;
+  left: 0; }
+
+#header #nav-wrapper {
+  height: 3.5rem; }
+
+@media (max-width: 800px) {
+  #header #nav {
+    overflow-x: scroll;
+    white-space: nowrap;
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */ }
+    #header #nav::-webkit-scrollbar {
+      display: none; }
+    #header #nav .navitem {
+      display: inline-block;
+      height: 100%;
+      line-height: 1.6em;
+      color: #fdfcf3;
+      font-size: 15px;
+      letter-spacing: 1px;
+      padding: 1rem;
+      transition: color 0.1s;
+      outline: 0; } }
+
+@media (min-width: 801px) {
+  #header #nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    #header #nav .navitem {
       color: #fdfcf3;
       font-size: 15px;
       letter-spacing: 1px;
       padding: 1.4em 0;
       transition: color 0.1s;
       outline: 0; }
-      #header .header-nav .navitem:hover {
-        color: #D63236; }
+      #header #nav .navitem:hover {
+        color: #D63236; } }
 
 .home main {
   margin-top: 136px; }
