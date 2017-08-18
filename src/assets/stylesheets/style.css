@@ -7133,13 +7133,13 @@ http://flickity.metafizzy.co
   border: none;
   border-radius: 50%;
   background: white;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   /* vertically center */
   transform: translateY(-50%); }
 
 .flickity-prev-next-button:hover {
-  background: white; }
+  background: rgba(255, 255, 255, 0.65); }
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -7175,7 +7175,7 @@ http://flickity.metafizzy.co
   height: 60%; }
 
 .flickity-prev-next-button .arrow {
-  fill: #333; }
+  fill: #3c0d05; }
 
 /* ---- page dots ---- */
 .flickity-page-dots {
@@ -8116,13 +8116,13 @@ http://flickity.metafizzy.co
   border: none;
   border-radius: 50%;
   background: white;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   /* vertically center */
   transform: translateY(-50%); }
 
 .flickity-prev-next-button:hover {
-  background: white; }
+  background: rgba(255, 255, 255, 0.65); }
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -8158,7 +8158,7 @@ http://flickity.metafizzy.co
   height: 60%; }
 
 .flickity-prev-next-button .arrow {
-  fill: #333; }
+  fill: #3c0d05; }
 
 /* ---- page dots ---- */
 .flickity-page-dots {
