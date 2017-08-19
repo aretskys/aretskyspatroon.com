@@ -67,6 +67,10 @@
   }
   #nav {
     @media (max-width: 800px) {
+      float: left;
+    }
+    transition: transform .2s ease-in-out;
+    @media (max-width: 800px) {
       .navitem {
         display: inline-block;
         height: 100%;
@@ -95,6 +99,10 @@
         }
       }
     }
+  }
+
+  .nav-no-transition {
+    transition: none !important;
   }
 
   [data-overflowing="both"] ~ .advancer-left,
