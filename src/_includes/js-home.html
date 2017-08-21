@@ -200,7 +200,11 @@
         var maxHeight = winHeight - headHeight;
         // $('#main-carousel').height(maxHeight);
         $('.main-carousel .item').each(function(){
-          $(this).height(maxHeight);
+          if (maxHeight < 800) {
+            $(this).height(maxHeight);
+          } else {
+            $(this).height(800);
+          }
         })
         $('.main-carousel').flickity({
           // options
