@@ -7814,9 +7814,15 @@ template {
   background-color: #D63236; }
 
 .home section#menus .menu-name {
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 1px;
   transition: background-color 0.1s; }
+  @media (min-width: 400px) {
+    .home section#menus .menu-name {
+      font-size: 15px; } }
+  @media (min-width: 768px) {
+    .home section#menus .menu-name {
+      margin: 0 .5rem; } }
   .home section#menus .menu-name:hover {
     background-color: #D63236; }
 

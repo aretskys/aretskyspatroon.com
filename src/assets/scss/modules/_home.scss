@@ -87,7 +87,13 @@
       background-color: $brand-red;
     }
     .menu-name {
-      font-size: 15px;
+      font-size: 13px;
+      @media (min-width: 400px) {
+        font-size: 15px;
+      }
+      @media (min-width: 768px) {
+        margin: 0 .5rem;
+      }
       letter-spacing: 1px;
       // padding: 1.4em 0;
       transition: background-color 0.1s;
