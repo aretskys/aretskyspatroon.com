@@ -34,6 +34,14 @@
       }
     }).register("screen and (max-width: 768px)", {
       match: function() {
+
+      // add mobile opentable code
+      var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src = "//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=button&theme=standard&lang=en-US&overlay=false&iframe=true";
+          // Use any selector
+          $("#opentable-code").html(s);
+
         var headHeight = $('#header').outerHeight();
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
@@ -216,6 +224,15 @@
       }
     }).register("screen and (min-width: 769px)", {
       match: function() {
+
+        // add wide opentable code
+        var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = "//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en&overlay=&iframe=false";
+            // Use any selector
+            $("#opentable-code").html(s);
+
+
         var nav = document.getElementById("nav");
         nav.className = 'auto center mw9';
 

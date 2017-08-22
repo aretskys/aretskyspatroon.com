@@ -7802,6 +7802,10 @@ template {
     margin-right: auto;
     font-size: 2.25rem; } }
 
+@media (min-width: 500px) {
+  .home section#menus .wrapper {
+    margin: 0 4rem; } }
+
 .home section#menus .single-menu {
   -moz-columns: 300px 2;
        columns: 300px 2; }
@@ -7897,20 +7901,12 @@ template {
   font-size: 15px; }
 
 @media (max-width: 768px) {
-  .home #book #ot-widget-container3 {
-    display: none; } }
-
-@media (max-width: 768px) {
   .home #book #ot-widget-container4 #ot-reservation-widget {
-    text-align: center; }
-    .home #book #ot-widget-container4 #ot-reservation-widget .ot-dtp-picker {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto; } }
+    text-align: center; } }
 
-@media (min-width: 769px) {
-  .home #book #ot-widget-container4 {
-    display: none; } }
+.home #book .ot-dtp-picker {
+  margin-left: auto;
+  margin-right: auto; }
 
 .home .ot-powered-by {
   display: none; }

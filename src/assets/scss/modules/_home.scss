@@ -75,6 +75,11 @@
   }
 
   section#menus {
+    .wrapper {
+      @media (min-width: 500px) {
+        margin: 0 4rem;
+      }
+    }
     .single-menu {
       columns: 300px 2;
     }
@@ -197,27 +202,20 @@
   }
 
   #book {
-    #ot-widget-container3 {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
     #ot-widget-container4 {
       @media (max-width: 768px) {
         #ot-reservation-widget {
           text-align: center;
-          .ot-dtp-picker {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-          }
         }
       }
-      @media (min-width: 769px) {
-        display: none;
-      }
     }
-
+    .ot-dtp-picker {
+      // @media (min-width: 500px) and (max-width: 768px) {
+      //   width: 25rem;
+      // }
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .ot-powered-by {
