@@ -7802,10 +7802,6 @@ template {
     margin-right: auto;
     font-size: 2.25rem; } }
 
-@media (min-width: 500px) {
-  .home section#menus .wrapper {
-    margin: 0 4rem; } }
-
 .home section#menus .single-menu {
   -moz-columns: 300px 2;
        columns: 300px 2; }
@@ -7838,13 +7834,48 @@ template {
   .home section#menus .menu-section .item:last-of-type {
     margin-bottom: 2rem; }
 
+@media (min-width: 600px) {
+  .home #events .cta-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; } }
+
 .home #events .cta {
+  display: block;
   font-size: 15px;
   letter-spacing: 1px;
   outline: 0;
+  margin-bottom: 1rem;
   transition: background-color 0.1s; }
+  @media (min-width: 600px) {
+    .home #events .cta {
+      display: imline;
+      width: 16rem;
+      margin-bottom: 0; } }
   .home #events .cta:hover {
     background-color: #D63236; }
+
+@media (min-width: 320px) {
+  .home #events .content-wrapper {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.25rem; } }
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .home #events .content-wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.5rem; } }
+
+@media (min-width: 1025px) {
+  .home #events .content-wrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.25rem; } }
 
 .home .remodal main {
   margin-top: 0; }
