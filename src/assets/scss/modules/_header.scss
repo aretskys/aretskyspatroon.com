@@ -21,7 +21,7 @@
     }
     #header__book {
       margin-top: 1rem;
-      @media (max-width: 700px) {
+      @media (max-width: 768px) {
         display: none;
       }
       // @include vertical-align();

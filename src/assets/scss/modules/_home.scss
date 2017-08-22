@@ -226,19 +226,16 @@
   }
 
   #book {
-    #ot-widget-container4 {
+    #ot-widget-container3 {
       @media (max-width: 768px) {
-        #ot-reservation-widget {
-          text-align: center;
-        }
+        display: none;
       }
     }
-    .ot-dtp-picker {
-      // @media (min-width: 500px) and (max-width: 768px) {
-      //   width: 25rem;
-      // }
-      margin-left: auto;
-      margin-right: auto;
+    #book__button {
+      // margin-top: 1rem;
+      @media (min-width: 769px) {
+        display: none;
+      }
     }
   }
 
