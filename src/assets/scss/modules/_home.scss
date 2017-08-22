@@ -59,11 +59,17 @@
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         font-size: 1.25rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
       @media (min-width: 768px) and (max-width: 1025px) {
         margin-left: 2rem;
         margin-right: 2rem;
         font-size: 1.5rem;
+      }
+      @media (min-width: 769px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
       }
       @media (min-width: 1025px) {
         max-width: 1024px;
@@ -75,6 +81,14 @@
   }
 
   section#menus {
+    .content-wrapper {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      @media (min-width: 769px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
     .single-menu {
       columns: 300px 2;
     }
@@ -115,6 +129,14 @@
   }
 
   #events {
+    .content-wrapper {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      @media (min-width: 769px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
     .cta-wrapper {
       @media (min-width: 600px) {
         display: flex;
@@ -226,6 +248,14 @@
   }
 
   #book {
+    .content-wrapper {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      @media (min-width: 769px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
     #ot-widget-container3 {
       @media (max-width: 768px) {
         display: none;
@@ -288,9 +318,15 @@
   }
 
   #contact {
-    .wrapper {
+    .content-wrapper {
       padding-left: 1rem;
       padding-right: 1rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      @media (min-width: 769px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
     }
     .contact-text {
       font-size: 21px;
