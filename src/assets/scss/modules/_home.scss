@@ -1,6 +1,8 @@
 .home {
   main {
-    margin-top: 136px;
+    @media (min-width: 769px) {
+      margin-top: 136px;
+    }
   }
 
   section#main-carousel {
@@ -11,15 +13,34 @@
       }
     }
     img {
-      height: 150px;
+      @media (max-width: 1024px) {
+        height: auto;
+        width: 35vw;
+      }
+      @media (min-width: 1025px) {
+        height: 150px;
+      }
     }
     .headline {
       // position: relative;
       top: 30%;
       transform: translateY(-30%);
       h4 {
-        font-size: 4rem;
+        @media (max-width: 1024px) {
+          font-size: 2rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+        }
+        @media (min-width: 1025px) {
+          font-size: 4rem;
+        }
         font-weight: normal;
+      }
+    }
+    .flickity-prev-next-button {
+      z-index: 3;
+      @media (max-width: 1024px) {
+        display: none;
       }
     }
   }
