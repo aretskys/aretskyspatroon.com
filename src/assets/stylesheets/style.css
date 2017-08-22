@@ -7931,12 +7931,6 @@ template {
   .home .remodal main td.extension {
     display: none; }
 
-.home #contact .contact-text {
-  font-size: 21px; }
-
-.home #contact .heading {
-  font-size: 15px; }
-
 @media (max-width: 768px) {
   .home #book #ot-widget-container4 #ot-reservation-widget {
     text-align: center; } }
@@ -7967,6 +7961,26 @@ template {
 
 .home [data-panes] > .active {
   display: block; }
+
+.home #contact .wrapper {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.home #contact .contact-text {
+  font-size: 21px; }
+
+.home #contact .heading {
+  font-size: 15px; }
+
+@media (min-width: 736px) {
+  .home #contact .column-1 {
+    width: 60%;
+    padding-right: 4rem; } }
+
+@media (min-width: 736px) {
+  .home #contact .column-2 {
+    width: 40%;
+    padding-left: 4rem; } }
 
 header {
   padding-bottom: 0; }

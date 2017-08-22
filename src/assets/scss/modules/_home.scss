@@ -225,15 +225,6 @@
     }
   }
 
-  #contact {
-    .contact-text {
-      font-size: 21px;
-    }
-    .heading {
-      font-size: 15px;
-    }
-  }
-
   #book {
     #ot-widget-container4 {
       @media (max-width: 768px) {
@@ -297,6 +288,31 @@
   }
   [data-panes] > .active {
     display: block;
+  }
+
+  #contact {
+    .wrapper {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .contact-text {
+      font-size: 21px;
+    }
+    .heading {
+      font-size: 15px;
+    }
+    .column-1 {
+      @media (min-width: 736px) {
+        width: 60%;
+        padding-right: 4rem;
+      }
+    }
+    .column-2 {
+      @media (min-width: 736px) {
+        width: 40%;
+        padding-left: 4rem;
+      }
+    }
   }
 
 }
