@@ -7745,6 +7745,10 @@ template {
 .home section#main-carousel .main-carousel .item {
   width: 100%; }
 
+@media (max-width: 767px) {
+  .home section#main-carousel img {
+    display: none; } }
+
 @media (max-width: 1024px) {
   .home section#main-carousel img {
     height: auto;
@@ -7759,7 +7763,12 @@ template {
   transform: translateY(-30%); }
   .home section#main-carousel .headline h4 {
     font-weight: normal; }
-    @media (max-width: 1024px) {
+    @media (max-width: 500px) {
+      .home section#main-carousel .headline h4 {
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem; } }
+    @media (min-width: 501px) and (max-width: 1024px) {
       .home section#main-carousel .headline h4 {
         font-size: 2rem;
         margin-left: 4rem;
