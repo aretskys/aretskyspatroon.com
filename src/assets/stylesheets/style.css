@@ -7896,6 +7896,22 @@ template {
 .home #contact .heading {
   font-size: 15px; }
 
+@media (max-width: 768px) {
+  .home #book #ot-widget-container3 {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .home #book #ot-widget-container4 #ot-reservation-widget {
+    text-align: center; }
+    .home #book #ot-widget-container4 #ot-reservation-widget .ot-dtp-picker {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; } }
+
+@media (min-width: 769px) {
+  .home #book #ot-widget-container4 {
+    display: none; } }
+
 .home .ot-powered-by {
   display: none; }
 

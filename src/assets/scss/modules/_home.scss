@@ -196,9 +196,34 @@
     }
   }
 
+  #book {
+    #ot-widget-container3 {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    #ot-widget-container4 {
+      @media (max-width: 768px) {
+        #ot-reservation-widget {
+          text-align: center;
+          .ot-dtp-picker {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+      @media (min-width: 769px) {
+        display: none;
+      }
+    }
+
+  }
+
   .ot-powered-by {
     display: none;
   }
+
 
   .ot-dtp-picker.wide {
     width: 52em;
