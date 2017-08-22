@@ -26,6 +26,7 @@
   $(document).ready(function() {
     var windowWidth = $(window).width();
     setScrollOffset();
+
     // media query(s)
     enquire.register("screen and (min-width: 480px)", {
       match : function() {
@@ -33,6 +34,32 @@
       }
     }).register("screen and (max-width: 768px)", {
       match: function() {
+        var headHeight = $('#header').outerHeight();
+        // var navHeight = $('#nav').outerHeight();
+        var winHeight = window.innerHeight;
+        var maxHeight = winHeight - headHeight;
+        // $('#main-carousel').height(maxHeight);
+        $('.main-carousel .item').each(function(){
+          $(this).height(400);
+        })
+        $('.main-carousel').flickity({
+          // options
+          cellAlign: 'left',
+          contain: true,
+          wrapAround: true,
+          draggable: true,
+          autoPlay: 4000,
+          arrowShape: {
+            x0: 15,
+            x1: 65, y1: 45,
+            x2: 70, y2: 40,
+            x3: 25
+          }
+          // setGallerySize: true,
+        });
+
+
+
         // mobile nav horizontal scroll
         // https://benfrain.com/a-horizontal-scrolling-navigation-pattern-for-touch-and-mouse-with-moving-current-indicator/
         var navwrapper = document.getElementById("nav-wrapper");
@@ -191,16 +218,19 @@
       match: function() {
         var nav = document.getElementById("nav");
         nav.className = 'auto center mw9';
-      }
-    }).register("screen and (min-width: 960px)", {
-      match : function() {
+
+
         var headHeight = $('#header').outerHeight();
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
         // $('#main-carousel').height(maxHeight);
         $('.main-carousel .item').each(function(){
-          $(this).height(maxHeight);
+          if (maxHeight < 800) {
+            $(this).height(maxHeight);
+          } else {
+            $(this).height(800);
+          }
         })
         $('.main-carousel').flickity({
           // options
@@ -217,6 +247,9 @@
           }
           // setGallerySize: true,
         });
+      }
+    }).register("screen and (min-width: 960px)", {
+      match : function() {
       },
       unmatch : function() {
       }
