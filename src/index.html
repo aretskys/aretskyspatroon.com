@@ -980,25 +980,15 @@ menus:
             meat_or_fish: false
 ---
 
-  <section id="main-carousel" class="relative">
-    <div class="absolute center left-0 right-0 mw8 tc z-2 | headline">
-      <img class="" src="{{page.carousel.logo_path}}">
-      <h4 class="mb0 mt5 | brand-cream latolight">{{page.carousel.headline}}</h4>
-      <p class="center f3 lh-title mw7-ns | brand-cream latolight">{{page.carousel.subheadline}}</p>
-    </div>
-    <div class="main-carousel">
-      {% for slide in page.slides %}
-      <div class="item" style="background: {% if page.carousel.logo_path or page.carousel.headline or page.carousel.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .5),rgba(60, 13, 5, .5)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
-      </div>
-      {% endfor %}
-    </div>
+  <section id="hero" class="relative" style="background: linear-gradient(0deg,rgba(60, 13, 5, .25),rgba(60, 13, 5, .25)),url(/uploads/slide-5.png); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+    <img class="absolute center left-0 right-0 z-2" src="{{page.carousel.logo_path}}">
   </section>
 
   <section id="about" class="bg-brand-cream latolight text-dark">
     <div class="center tc | content-wrapper">
-        <p class="f4 tracked ttu | agendamedium">about us</p>
+        <!-- <p class="f4 tracked ttu | agendamedium">about us</p> -->
+        <p class="center lh-title mw7">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
         <p class="lh-title">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
-        <p class="lh-title">Versatile, elegant and timeless, Aretsky’s Patroon features multiple private dining rooms waiting to be transformed by your personal touch, whether you are having an intimate dinner or using the entire townhouse for a private event.</p>
     </div>
   </section>
 

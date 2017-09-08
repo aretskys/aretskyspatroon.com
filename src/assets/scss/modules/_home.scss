@@ -5,6 +5,35 @@
     }
   }
 
+  section#hero {
+    @media (max-width: 420px) {
+      height: 30vh;
+    }
+    @media (min-width: 421px) {
+      height: 40vh;
+    }
+    @media (min-width: 667px) and (max-width: 767px) {
+      height: 300px;
+    }
+    @media (min-width: 1024px) {
+      height: 60vh;
+    }
+    img {
+      top: 40%;
+      transform: translateY(-40%);
+      @media (max-width: 767px) {
+        display: none;
+      }
+      @media (max-width: 1024px) {
+        height: auto;
+        width: 35vw;
+      }
+      @media (min-width: 1025px) {
+        height: 150px;
+      }
+    }
+  }
+
   section#main-carousel {
 
     .main-carousel {
@@ -26,8 +55,8 @@
     }
     .headline {
       // position: relative;
-      top: 30%;
-      transform: translateY(-30%);
+      top: 40%;
+      transform: translateY(-40%);
       h4 {
         @media (max-width: 500px) {
           font-size: 2rem;

@@ -7742,6 +7742,36 @@ template {
   .home main {
     margin-top: 136px; } }
 
+@media (max-width: 420px) {
+  .home section#hero {
+    height: 30vh; } }
+
+@media (min-width: 421px) {
+  .home section#hero {
+    height: 40vh; } }
+
+@media (min-width: 667px) and (max-width: 767px) {
+  .home section#hero {
+    height: 300px; } }
+
+@media (min-width: 1024px) {
+  .home section#hero {
+    height: 60vh; } }
+
+.home section#hero img {
+  top: 40%;
+  transform: translateY(-40%); }
+  @media (max-width: 767px) {
+    .home section#hero img {
+      display: none; } }
+  @media (max-width: 1024px) {
+    .home section#hero img {
+      height: auto;
+      width: 35vw; } }
+  @media (min-width: 1025px) {
+    .home section#hero img {
+      height: 150px; } }
+
 .home section#main-carousel .main-carousel .item {
   width: 100%; }
 
@@ -7759,8 +7789,8 @@ template {
     height: 150px; } }
 
 .home section#main-carousel .headline {
-  top: 30%;
-  transform: translateY(-30%); }
+  top: 40%;
+  transform: translateY(-40%); }
   .home section#main-carousel .headline h4 {
     font-weight: normal; }
     @media (max-width: 500px) {
