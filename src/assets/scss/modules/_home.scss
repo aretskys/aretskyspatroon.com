@@ -40,7 +40,7 @@
           margin-right: 4rem;
         }
         @media (min-width: 1025px) {
-          font-size: 4rem;
+          font-size: 2.5rem;
         }
         font-weight: normal;
       }
@@ -114,6 +114,8 @@
       break-inside: avoid;
       h5 {
         border-color: $brand-red;
+        font-size: 17px;
+        // letter-spacing: 1px;
       }
       .item {
         font-size: 17px;
@@ -194,7 +196,6 @@
       border-bottom-style: solid;
       border-bottom-width: .5rem;
       color: #3c0d05;
-      font-family: "Agenda Light";
       margin-bottom: 1rem;
     }
     h1 {
@@ -209,14 +210,12 @@
     label, p {
       color: $text-dark;
       display: inline-block ;
-      font-family: "Agenda Light";
       font-size: 17px;
       margin-bottom: 4px;
       margin-top: 8px;
       text-transform:uppercase;
     }
     p.agendamedium {
-      font-family: "Agenda Medium";
     }
     input {
       padding: .75rem .5rem;
@@ -234,7 +233,6 @@
       background-color: $brand-red;
       color: $text-light;
       border: none;
-      font-family: "Agenda Medium";
       letter-spacing: 1px;
       text-transform: uppercase;
       cursor: pointer;

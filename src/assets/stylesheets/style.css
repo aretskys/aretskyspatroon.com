@@ -7775,7 +7775,7 @@ template {
         margin-right: 4rem; } }
     @media (min-width: 1025px) {
       .home section#main-carousel .headline h4 {
-        font-size: 4rem; } }
+        font-size: 2.5rem; } }
 
 .home section#main-carousel .flickity-prev-next-button {
   z-index: 3; }
@@ -7841,7 +7841,8 @@ template {
   page-break-inside: avoid;
        break-inside: avoid; }
   .home section#menus .menu-section h5 {
-    border-color: #D63236; }
+    border-color: #D63236;
+    font-size: 17px; }
   .home section#menus .menu-section .item {
     font-size: 17px; }
   .home section#menus .menu-section .item:first-of-type {
@@ -7913,7 +7914,6 @@ template {
     border-bottom-style: solid;
     border-bottom-width: .5rem;
     color: #3c0d05;
-    font-family: "Agenda Light";
     margin-bottom: 1rem; }
   .home .remodal main h1 {
     margin-top: 1.5rem; }
@@ -7924,13 +7924,10 @@ template {
   .home .remodal main label, .home .remodal main p {
     color: #3c0d05;
     display: inline-block;
-    font-family: "Agenda Light";
     font-size: 17px;
     margin-bottom: 4px;
     margin-top: 8px;
     text-transform: uppercase; }
-  .home .remodal main p.agendamedium {
-    font-family: "Agenda Medium"; }
   .home .remodal main input {
     padding: .75rem .5rem;
     box-shadow: none !important;
@@ -7945,7 +7942,6 @@ template {
     background-color: #D63236;
     color: #fdfcf3;
     border: none;
-    font-family: "Agenda Medium";
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer; }
@@ -9498,13 +9494,16 @@ sub {
 .agendamedium {
   font-family: "Agenda Medium"; }
 
-.calluna {
-  font-family: 'Calluna Regular'; }
+.latothin {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important; }
 
-.callunalight {
-  font-family: 'Calluna Light'; }
+.latolight {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300 !important; }
 
-.callunaitalic {
-  font-family: 'Calluna Italic'; }
+.lato {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400 !important; }
 
 /*# sourceMappingURL=style.css.map */

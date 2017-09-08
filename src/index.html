@@ -981,10 +981,10 @@ menus:
 ---
 
   <section id="main-carousel" class="relative">
-    <div class="absolute center left-0 right-0 mw8 tc z-2 | callunalight headline">
+    <div class="absolute center left-0 right-0 mw8 tc z-2 | headline">
       <img class="" src="{{page.carousel.logo_path}}">
-      <h4 class="mb0 mt5 | brand-cream">{{page.carousel.headline}}</h4>
-      <p class="center f3 lh-title mw7-ns | brand-cream">{{page.carousel.subheadline}}</p>
+      <h4 class="mb0 mt5 | brand-cream latolight">{{page.carousel.headline}}</h4>
+      <p class="center f3 lh-title mw7-ns | brand-cream latolight">{{page.carousel.subheadline}}</p>
     </div>
     <div class="main-carousel">
       {% for slide in page.slides %}
@@ -994,7 +994,7 @@ menus:
     </div>
   </section>
 
-  <section id="about" class="bg-brand-cream callunalight text-dark">
+  <section id="about" class="bg-brand-cream latolight text-dark">
     <div class="center tc | content-wrapper">
         <p class="f4 tracked ttu | agendamedium">about us</p>
         <p class="lh-title">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
@@ -1023,20 +1023,15 @@ menus:
       </div>
       <div data-panes>
         {% for menu in page.menus %}
-          <div class="pa3 | agendalight single-menu">
+          <div class="pa3 | single-menu">
           {% for section in menu.sections %}
             {% if section.items[0].item_name %}
               <div class=" | menu-section">
-                <h5 class="bb bw3 f4 ma0 pb2 tracked ttc | text-dark">{{ section.section_name }}</h5>
+                <h5 class="bb bw3 ma0 pb2 ttu | lato text-dark">{{ section.section_name }}</h5>
                 {% for item in section.items %}
                   <div class="item">
-                    {% if item.market_price %}
-                      <p class="mt2 mb1 dib | agendamedium">mp</p>
-                    {% else %}
-                      <p class="mt2 mb1 dib | agendamedium">{{ item.item_price }}</p>
-                    {% endif %}
-                    <p class="mt2 mb1 dib ttu">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>
-                    <p class="i mt0 mb1 ">{{ item.item_details }}</p>
+                    <p class="mt2 mb1 dib ttu | lato ">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>
+                    <p class="i mt0 mb1 | latolight ">{{ item.item_details }}</p>
                   </div>
                 {% endfor %}
               </div>
@@ -1045,16 +1040,16 @@ menus:
           </div>
         {% endfor %}
       </div>
-      <div class="agendalight center mt3 tc">* Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness</div>
+      <div class="latolight center mt3 tc">* Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness</div>
     </div>
   </section>
 
-  <section id="events" class="bg-brand-cream brand-cream callunalight" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .6)),url({{ page.events_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+  <section id="events" class="bg-brand-cream brand-cream latolight" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .6)),url({{ page.events_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
     <div class="center tc | content-wrapper">
         <p class="f4 tracked ttu | agendamedium">events &amp; weddings</p>
         <p class="lh-title">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
         <p class="lh-title">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
-        <div class="mv4 tracked ttu | agendamedium cta-wrapper">
+        <div class="mt5 mb4 tracked ttu | agendamedium cta-wrapper">
           <a href="" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">One-sheet</a>
           <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">Virtual Tour</a>
           <a data-remodal-target="modal" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">Plan your event</a>
@@ -1068,22 +1063,22 @@ menus:
         <p class="f4 mb2 mb5-ns tc tracked ttu | agendamedium">Contact</p>
         <div class="fl | column-1">
           <div class="mt0 mb4">
-            <p class="address callunalight contact-text">160 East 46th Street<br />New York, NY 10017</p>
+            <p class="address latolight contact-text">160 East 46th Street<br />New York, NY 10017</p>
           </div>
-          <p class="mb0 | callunalight contact-text"><span class="tracked ttu | agendabold heading">phone </span>(212) 883-7373</p>
-          <p class="mt0 | callunalight contact-text"><span class="tracked ttu | agendabold heading">fax </span>(212) 883-1118</p>
+          <p class="mb0 | latolight contact-text"><span class="tracked ttu | agendabold heading">phone </span>(212) 883-7373</p>
+          <p class="mt0 | latolight contact-text"><span class="tracked ttu | agendabold heading">fax </span>(212) 883-1118</p>
 
           <div class="mv4">
-            <p class="callunalight contact-text">Aretsky's Patroon is open Monday through Friday for lunch, dinner and rooftop cocktails. On weekends, we are open for private events only.</p>
+            <p class="latolight contact-text">Aretsky's Patroon is open Monday through Friday for lunch, dinner and rooftop cocktails. On weekends, we are open for private events only.</p>
           </div>
 
           <div class="fl mb4">
             <p class="mb2 tracked ttu | agendabold heading">Monday &ndash; Friday</p>
-            <div class="fl mb0 w-40 | callunalight contact-text">Lunch:</div><div class="fl mb0 w-60 | callunalight contact-text">11:45am – 2:45pm</div>
-            <div class="fl mb0 w-40 | callunalight contact-text">Dinner:</div><div class="fl mb0 w-60 | callunalight contact-text">5:30 – 10:00pm</div>
-            <div class="fl mb0 w-40 | callunalight contact-text">Bar:</div><div class="fl mb0 w-60 | callunalight contact-text">Noon – 10pm</div>
-            <div class="fl mb0 w-40 | callunalight contact-text">Rooftop Lunch:</div><div class="fl mb0 w-60 | callunalight contact-text">11:45am – 2:45pm</div>
-            <div class="fl mb0 w-40 | callunalight contact-text">Rooftop Terrace:</div><div class="fl mb0 w-60 | callunalight contact-text">4 – 10pm</div>
+            <div class="fl mb0 w-40 | latolight contact-text">Lunch:</div><div class="fl mb0 w-60 | latolight contact-text">11:45am – 2:45pm</div>
+            <div class="fl mb0 w-40 | latolight contact-text">Dinner:</div><div class="fl mb0 w-60 | latolight contact-text">5:30 – 10:00pm</div>
+            <div class="fl mb0 w-40 | latolight contact-text">Bar:</div><div class="fl mb0 w-60 | latolight contact-text">Noon – 10pm</div>
+            <div class="fl mb0 w-40 | latolight contact-text">Rooftop Lunch:</div><div class="fl mb0 w-60 | latolight contact-text">11:45am – 2:45pm</div>
+            <div class="fl mb0 w-40 | latolight contact-text">Rooftop Terrace:</div><div class="fl mb0 w-60 | latolight contact-text">4 – 10pm</div>
           </div>
 
         </div>
@@ -1091,7 +1086,7 @@ menus:
         <div class="fl | column-2">
           <img src="/uploads/map.png">
           <div class="mv4">
-            <p class="callunalight contact-text">Accessible by the 4, 5, 6, 7, and S at Grand Central Station. Several parking garages are located nearby, with one across the street.</p>
+            <p class="latolight contact-text">Accessible by the 4, 5, 6, 7, and S at Grand Central Station. Several parking garages are located nearby, with one across the street.</p>
           </div>
         </div>
       </div>
