@@ -1,6 +1,8 @@
 
 @import
   "modules/vars",
+  "modules/bootstrap",
+  "modules/bootstrap-theme",
   "tachyons.scss",
   "modules/flickity",
   "node_modules/normalize-scss/sass/normalize/import-now",
@@ -70,6 +72,11 @@
 
   .lato {
     font-family: 'Lato', sans-serif;
+    font-weight: 400 !important;
+  }
+
+  .raleway {
+    font-family: 'Raleway', sans-serif;
     font-weight: 400 !important;
   }
 

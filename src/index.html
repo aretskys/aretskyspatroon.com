@@ -984,10 +984,10 @@ menus:
     <img class="absolute center left-0 right-0 z-2" src="{{page.carousel.logo_path}}">
   </section>
 
-  <section id="about" class="bg-brand-cream latolight text-dark">
+  <section id="about" class="bg-brand-cream raleway text-dark">
     <div class="center tc | content-wrapper">
         <!-- <p class="f4 tracked ttu | agendamedium">about us</p> -->
-        <p class="center lh-title mw7">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
+        <p class="center lh-title">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
         <p class="lh-title">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
     </div>
   </section>
@@ -1021,7 +1021,7 @@ menus:
                 {% for item in section.items %}
                   <div class="item">
                     <p class="mt2 mb1 dib ttu | lato ">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>
-                    <p class="i mt0 mb1 | latolight ">{{ item.item_details }}</p>
+                    <p class="mt0 mb1 | latolight ">{{ item.item_details }}</p>
                   </div>
                 {% endfor %}
               </div>
@@ -1040,9 +1040,18 @@ menus:
         <p class="lh-title">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
         <p class="lh-title">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
         <div class="mt5 mb4 tracked ttu | agendamedium cta-wrapper">
-          <a href="" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">One-sheet</a>
-          <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">Virtual Tour</a>
-          <a data-remodal-target="modal" class="link ph3 mh2 pv3 ph1 pointer | bg-brand-brown cta text-light">Plan your event</a>
+          <a href="" class="link ph3 mh2 pv3 pointer | bg-brand-brown cta text-light">One-sheet</a>
+          <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv3 pointer | bg-brand-brown cta text-light">Virtual Tour</a>
+          <!-- <a data-remodal-target="modal" class="link ph3 mh2 pv3 pointer | bg-brand-brown cta text-light">Plan your event</a> -->
+          <div class="dropdown mh2">
+              <button class="btn btn-primary dropdown-toggle | link pointer ttu w-100 | agendamedium bg-brand-brown cta text-light" type="button" data-toggle="dropdown" style="padding-top: 14px; padding-bottom: 14px;">
+                Plan Your Event
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a class="ph3 pv3 pointer" tabindex="-1">Walter</a></li>
+                  <li><a class="ph3 pv3 pointer" tabindex="-1">Bunny</a></li>
+              </ul>
+          </div>
         </div>
     </div>
   </section>
