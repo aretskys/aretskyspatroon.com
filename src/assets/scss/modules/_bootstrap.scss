@@ -780,8 +780,8 @@ input[type="button"].btn-block {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 9px;
-  right: 9px;
+  left: 0px;
+  right: 0px;
   z-index: 1000;
   display: none;
   float: left;
@@ -812,11 +812,11 @@ input[type="button"].btn-block {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  // padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857143;
-  color: #333333;
+  // line-height: 1.42857143;
+  // color: #333333;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
