@@ -161,8 +161,8 @@ menus:
             market_price: false
             item_details: >-
               seasonal vegetables, radicchio, romaine, spiced chick peas -
-              grilled chicken +10, chilled shrimp +12, grilled salmon +12,
-              seared tuna +16, petit filet +16
+              add grilled chicken, chilled shrimp, grilled salmon,
+              seared tuna, or petit filet
             meat_or_fish: true
       - section_name: Main
         items:
@@ -987,8 +987,8 @@ menus:
   <section id="about" class="bg-brand-cream raleway text-dark">
     <div class="center tc | content-wrapper">
         <!-- <p class="f4 tracked ttu | agendamedium">about us</p> -->
-        <p class="center lh-title">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
-        <p class="lh-title">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
+        <p class="center lh-copy">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
+        <p class="lh-copy">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
     </div>
   </section>
 
@@ -1021,7 +1021,7 @@ menus:
                 {% for item in section.items %}
                   <div class="item">
                     <p class="mt2 mb1 dib ttu | lato ">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>
-                    <p class="mt0 mb1 | latolight ">{{ item.item_details }}</p>
+                    <p class="mt0 mb1 measure-narrow | latolight ">{{ item.item_details }}</p>
                   </div>
                 {% endfor %}
               </div>
@@ -1037,8 +1037,8 @@ menus:
   <section id="events" class="bg-brand-cream brand-cream latolight" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .6)),url({{ page.events_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
     <div class="center tc | content-wrapper">
         <p class="f4 tracked ttu | agendamedium">events &amp; weddings</p>
-        <p class="lh-title">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
-        <p class="lh-title">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
+        <p class="lh-copy">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
+        <p class="lh-copy">Our six private rooms – each with a unique theme, and featuring an eclectic collection of 20th century photography – lend themselves to memorable events with an upscale air, and can be as laid-back or as refined as you like.</p>
         <div class="mt5 mb4 tracked ttu | agendamedium cta-wrapper">
           <a href="" class="link ph3 mh2 pv3 pointer | bg-brand-brown cta text-light">One-sheet</a>
           <a href="http://www.youvisit.com/tour/aretskyspatroon?pl=v" target="_blank" class="link ph3 mh2 pv3 pointer | bg-brand-brown cta text-light">Virtual Tour</a>
