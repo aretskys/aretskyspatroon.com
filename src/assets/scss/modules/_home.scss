@@ -123,10 +123,13 @@
       columns: 300px 2;
     }
     .menu-name.active {
-      background-color: $brand-red;
+      background-color: $brand-brown;
+      color: $brand-cream !important;
+      border: 1px solid $brand-cream;
     }
     .menu-name {
       font-size: 13px;
+      border: 1px solid $brand-brown;
       @media (min-width: 400px) {
         font-size: 15px;
       }
@@ -135,9 +138,12 @@
       }
       letter-spacing: 1px;
       // padding: 1.4em 0;
-      transition: background-color 0.1s;
+      transition: all 0.2s;
       &:hover {
-        background-color: $brand-red;
+        transition: all 0.2s;
+        background-color: $brand-brown;
+        border: 1px solid $brand-cream;
+        color: $brand-cream;
       }
     }
     .menu-section {
@@ -285,16 +291,17 @@
         padding-bottom: 4rem;
       }
     }
-    #ot-widget-container3 {
-      @media (max-width: 768px) {
-        display: none;
-      }
+  }
+
+  #ot-widget-container3 {
+    @media (max-width: 768px) {
+      display: none;
     }
-    #book__button {
-      // margin-top: 1rem;
-      @media (min-width: 769px) {
-        display: none;
-      }
+  }
+  #book__button {
+    // margin-top: 1rem;
+    @media (min-width: 769px) {
+      display: none;
     }
   }
 

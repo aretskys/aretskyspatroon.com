@@ -21,6 +21,7 @@ slides:
   - image_path: /uploads/slide-1.png
     headline:
     subheadline:
+menu_background_image: /uploads/bg-menu.jpg
 reservation_background_image: /uploads/bg-book.jpg
 events_background_image: /uploads/bg-events.jpg
 menus:
@@ -989,26 +990,23 @@ menus:
         <!-- <p class="f4 tracked ttu | agendamedium">about us</p> -->
         <p class="center lh-copy">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
         <p class="lh-copy">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
+        <div class="b--moon-gray ba br center mt5-l mw5 mw8-ns pa4 tc">
+          <p class="f4 mt0 mb4 tracked ttu | agendamedium text-dark">book a table</p>
+          <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en-US&overlay=false&iframe=false'></script>
+          <div class="button-wrapper tc"></div>
+          <a id="book__button" class="agendamedium bg-brand-red brand-cream br2 dib f6 grow mb0 ml4 mr4 no-underline ph4 pv3 tracked ttu" href="https://www.opentable.com/r/aretskys-patroon-reservations-new-york?restref=1300&lang=en-US" target="_blank">Book Now</a>
+        </div>
     </div>
   </section>
 
-  <section id="book" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .4)),url({{ page.reservation_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
-    <div class="center mw5 mw8-ns tc | content-wrapper">
-      <div class="mt4 mb5">
-        <p class="f4 mb4 tracked ttu | agendamedium brand-cream">book a table</p>
-        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en-US&overlay=false&iframe=false'></script>
-        <div class="button-wrapper tc"></div>
-        <a id="book__button" class="agendamedium bg-brand-red brand-cream br2 dib f6 grow mb0 ml4 mr4 no-underline ph4 pv3 tracked ttu" href="https://www.opentable.com/r/aretskys-patroon-reservations-new-york?restref=1300&lang=en-US" target="_blank">Book Now</a>
-      </div>
-    </div>
-  </section>
 
-  <section id="menus" class="| bg-brand-cream text-dark">
+
+  <section id="menus" class="flex flex-wrap | brand-cream" style="background: linear-gradient(0deg,rgba(60, 13, 5, .8),rgba(60, 13, 5, .8)),url({{ page.menu_background_image }}); background-repeat: no-repeat; background-position: 0 0;">
     <div class="center mw8-ns | content-wrapper">
       <p class="f4 tracked tc ttu | agendamedium">browse our menus</p>
       <div data-tabs class="flex items-center justify-center mv4 tracked ttu | agendamedium">
         {% for menu in page.menus %}
-        <div class="ph3 pv2 ph1 pointer | bg-brand-brown menu-name text-light">{{ menu.menu_name }}</div>
+        <div class="ph3 pv2 ph1 pointer | bg-brand-cream menu-name text-dark">{{ menu.menu_name }}</div>
         {% endfor %}
       </div>
       <div data-panes>
@@ -1017,7 +1015,7 @@ menus:
           {% for section in menu.sections %}
             {% if section.items[0].item_name %}
               <div class=" | menu-section">
-                <h5 class="bb bw3 ma0 pb2 ttu | lato text-dark">{{ section.section_name }}</h5>
+                <h5 class="bb bw3 ma0 pb2 ttu | lato brand-cream">{{ section.section_name }}</h5>
                 {% for item in section.items %}
                   <div class="item">
                     <p class="mt2 mb1 dib ttu | lato ">{{ item.item_name }}{% if item.meat_or_fish %}*{% endif %}</p>

@@ -8798,12 +8798,15 @@ template {
        columns: 300px 2; }
 
 .home section#menus .menu-name.active {
-  background-color: #D63236; }
+  background-color: #3C0D05;
+  color: #fefdf5 !important;
+  border: 1px solid #fefdf5; }
 
 .home section#menus .menu-name {
   font-size: 13px;
+  border: 1px solid #3C0D05;
   letter-spacing: 1px;
-  transition: background-color 0.1s; }
+  transition: all 0.2s; }
   @media (min-width: 400px) {
     .home section#menus .menu-name {
       font-size: 15px; } }
@@ -8811,7 +8814,10 @@ template {
     .home section#menus .menu-name {
       margin: 0 .5rem; } }
   .home section#menus .menu-name:hover {
-    background-color: #D63236; }
+    transition: all 0.2s;
+    background-color: #3C0D05;
+    border: 1px solid #fefdf5;
+    color: #fefdf5; }
 
 .home section#menus .menu-section {
   page-break-inside: avoid;
@@ -8934,11 +8940,11 @@ template {
       padding-bottom: 4rem; } }
 
 @media (max-width: 768px) {
-  .home #book #ot-widget-container3 {
+  .home #ot-widget-container3 {
     display: none; } }
 
 @media (min-width: 769px) {
-  .home #book #book__button {
+  .home #book__button {
     display: none; } }
 
 .home .ot-powered-by {
