@@ -7,11 +7,12 @@
   var setScrollOffset = function() {
     // smoothscroll
     var headerHeight = $('#header').height();
+    var scrollOffset = headerHeight - 1;
     // var topPadding = $('#about').css('padding-top');
     // var topPaddingNum = parseInt(topPadding);
     // console.log('topPadding:' + topPadding + ', headerHeight:' + headerHeight);
     $('#header a').smoothScroll({
-      offset: -headerHeight,
+      offset: -scrollOffset,
       easing: 'swing',
     });
     // $('header a.video').smoothScroll({offset: -headerHeight});
@@ -34,7 +35,7 @@
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
-        // $('#main-carousel').height(maxHeight);
+        // $('#gallery').height(maxHeight);
         $('.main-carousel .item').each(function(){
           $(this).height(270);
         })
@@ -45,7 +46,7 @@
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
-        // $('#main-carousel').height(maxHeight);
+        // $('#gallery').height(maxHeight);
         $('.main-carousel .item').each(function(){
           $(this).height(350);
         })
@@ -56,7 +57,7 @@
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
-        // $('#main-carousel').height(maxHeight);
+        // $('#gallery').height(maxHeight);
         $('.main-carousel .item').each(function(){
           $(this).height(500);
         })
@@ -227,7 +228,7 @@
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
-        // $('#main-carousel').height(maxHeight);
+        // $('#gallery').height(maxHeight);
         $('.main-carousel .item').each(function(){
           if (maxHeight < 800) {
             $(this).height(maxHeight);
@@ -289,6 +290,9 @@
     var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-download mr1' aria-hidden='true'></i>download pdf"
     if (link) {
       $pdf.html(html)
+    }
+    else {
+      $pdf.html('')
     }
   }
   // set pdf on select
