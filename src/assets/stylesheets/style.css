@@ -8744,22 +8744,6 @@ template {
   .home section#main-carousel .main-carousel {
     max-width: 1180px; } }
 
-.home section#main-carousel .main-carousel .item {
-  width: 100%; }
-
-@media (max-width: 767px) {
-  .home section#main-carousel img {
-    display: none; } }
-
-@media (max-width: 1024px) {
-  .home section#main-carousel img {
-    height: auto;
-    width: 25vw; } }
-
-@media (min-width: 1025px) {
-  .home section#main-carousel img {
-    height: 150px; } }
-
 .home section#main-carousel .headline {
   top: 40%;
   transform: translateY(-40%); }
@@ -8780,6 +8764,7 @@ template {
         font-size: 2.5rem; } }
 
 .home section#main-carousel .flickity-prev-next-button {
+  display: none;
   z-index: 3; }
   @media (max-width: 1024px) {
     .home section#main-carousel .flickity-prev-next-button {

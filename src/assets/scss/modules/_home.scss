@@ -40,22 +40,22 @@
       @media (min-width: 769px) {
         max-width: 1180px;
       }
-      .item {
-        width: 100%;
-      }
+      // .item {
+      //   width: 100%;
+      // }
     }
-    img {
-      @media (max-width: 767px) {
-        display: none;
-      }
-      @media (max-width: 1024px) {
-        height: auto;
-        width: 25vw;
-      }
-      @media (min-width: 1025px) {
-        height: 150px;
-      }
-    }
+    // img {
+    //   @media (max-width: 767px) {
+    //     display: none;
+    //   }
+    //   @media (max-width: 1024px) {
+    //     height: auto;
+    //     width: 25vw;
+    //   }
+    //   @media (min-width: 1025px) {
+    //     height: 150px;
+    //   }
+    // }
     .headline {
       // position: relative;
       top: 40%;
@@ -78,6 +78,7 @@
       }
     }
     .flickity-prev-next-button {
+      display: none;
       z-index: 3;
       @media (max-width: 1024px) {
         display: none;

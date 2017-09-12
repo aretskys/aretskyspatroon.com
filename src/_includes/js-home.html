@@ -38,21 +38,6 @@
         $('.main-carousel .item').each(function(){
           $(this).height(270);
         })
-        $('.main-carousel').flickity({
-          // options
-          cellAlign: 'left',
-          contain: true,
-          wrapAround: true,
-          draggable: true,
-          autoPlay: 4000,
-          arrowShape: {
-            x0: 15,
-            x1: 65, y1: 45,
-            x2: 70, y2: 40,
-            x3: 25
-          }
-          // setGallerySize: true,
-        });
       }
     }).register("screen and (max-width: 667px)", {
       match : function() {
@@ -64,21 +49,6 @@
         $('.main-carousel .item').each(function(){
           $(this).height(350);
         })
-        $('.main-carousel').flickity({
-          // options
-          cellAlign: 'left',
-          contain: true,
-          wrapAround: true,
-          draggable: true,
-          autoPlay: 4000,
-          arrowShape: {
-            x0: 15,
-            x1: 65, y1: 45,
-            x2: 70, y2: 40,
-            x3: 25
-          }
-          // setGallerySize: true,
-        });
       }
     }).register("screen and (max-width: 768px)", {
       match: function() {
@@ -90,22 +60,6 @@
         $('.main-carousel .item').each(function(){
           $(this).height(500);
         })
-        $('.main-carousel').flickity({
-          // options
-          cellAlign: 'left',
-          contain: true,
-          wrapAround: true,
-          draggable: true,
-          autoPlay: 4000,
-          arrowShape: {
-            x0: 15,
-            x1: 65, y1: 45,
-            x2: 70, y2: 40,
-            x3: 25
-          }
-          // setGallerySize: true,
-        });
-
         // mobile nav horizontal scroll
         // https://benfrain.com/a-horizontal-scrolling-navigation-pattern-for-touch-and-mouse-with-moving-current-indicator/
         var navwrapper = document.getElementById("nav-wrapper");
@@ -281,25 +235,11 @@
             $(this).height(800);
           }
         })
-        $('.main-carousel').flickity({
-          // options
-          cellAlign: 'left',
-          contain: true,
-          wrapAround: true,
-          draggable: false,
-          autoPlay: 4000,
-          arrowShape: {
-            x0: 15,
-            x1: 65, y1: 45,
-            x2: 70, y2: 40,
-            x3: 25
-          }
-          // setGallerySize: true,
-        });
       },
       unmatch : function() {
       }
     });
+
 
     var setActiveMenu = function(){
       $('.menu-name').removeClass('active');
@@ -309,6 +249,37 @@
     }
     setActiveMenu();
 
+  });
+
+  var $carousel = $('.main-carousel').flickity({
+    // options
+    cellSelector: 'img',
+    // cellAlign: 'left',
+    // wrapAround: true,
+    // draggable: true,
+    // autoPlay: 4000,
+    // arrowShape: {
+    //   x0: 15,
+    //   x1: 65, y1: 45,
+    //   x2: 70, y2: 40,
+    //   x3: 25
+    // }
+    // setGallerySize: true,
+  });
+  // flickity captions
+  var $caption = $('.caption');
+  // get flickity instance
+  var flkty = $carousel.data('flickity');
+  // set initial caption
+  setCaption();
+  // set caption
+  function setCaption() {
+    // use img alt
+    $caption.text( flkty.selectedElement.alt )
+  }
+  // set caption on select
+  $carousel.on( 'select.flickity', function() {
+    setCaption()
   });
 
 </script>
