@@ -82,7 +82,8 @@
 .btn:active,
 .btn.active {
   outline: 0;
-  background-image: none; }
+  background-image: none;
+  background-color: #d83030; }
 
 .btn.disabled,
 .btn[disabled],
@@ -152,6 +153,27 @@ fieldset[disabled] .btn-default.focus {
 .btn-default .badge {
   color: #ffffff;
   background-color: #333333; }
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #d83030; }
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  background-color: #d83030; }
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none; }
 
 .btn-primary.disabled:hover,
 .btn-primary[disabled]:hover,
@@ -8852,7 +8874,7 @@ template {
     -ms-flex-align: center;
         align-items: center; } }
 
-.home #events .cta, .home #events .dropdown {
+.home #events .cta, .home #events .dropup {
   display: block;
   font-size: 15px;
   letter-spacing: 1px;
@@ -8860,12 +8882,36 @@ template {
   margin-bottom: 1rem;
   transition: background-color 0.1s; }
   @media (min-width: 600px) {
-    .home #events .cta, .home #events .dropdown {
+    .home #events .cta, .home #events .dropup {
       display: inline;
       width: 16rem;
       margin-bottom: 0; } }
-  .home #events .cta:hover, .home #events .dropdown:hover {
+  .home #events .cta:hover, .home #events .dropup:hover {
     background-color: #D63236; }
+
+.home #events .dropdown-menu {
+  top: auto;
+  bottom: 127% !important; }
+  .home #events .dropdown-menu a {
+    transition: all 0.1s; }
+
+.home #events .dropdown-menu a:hover {
+  transition: all 0.1s;
+  background-color: #0d0301; }
+
+.home #events .dropdown-menu:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(216, 48, 48, 0);
+  border-top-color: #3d0d03;
+  border-width: 10px;
+  margin-left: -10px; }
 
 @media (min-width: 320px) {
   .home #events .content-wrapper {
