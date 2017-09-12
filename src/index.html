@@ -990,11 +990,11 @@ menus:
         <!-- <p class="f4 tracked ttu | agendamedium">about us</p> -->
         <p class="center lh-copy">At Aretsky's Patroon, the charm of old New York meets 21st century style.</p>
         <p class="lh-copy">Within four levels of an iconic Manhattan townhouse, a stylish clientele enjoys everything from relaxed lunches to intimate celebrations to festive rooftop cocktails, with one of the culinary world’s finest photography collections as a backdrop.</p>
-        <div class="b--moon-gray ba br center mt5-l mw5 mw8-ns pa4 tc">
-          <p class="f4 mt0 mb4 tracked ttu | agendamedium text-dark">book a table</p>
+        <div class="center mt5-l mw5 mw8-ns pa4 tc">
+          <!-- <p class="f4 mt0 mb4 tracked ttu | agendamedium text-dark">reserve a table</p> -->
           <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en-US&overlay=false&iframe=false'></script>
           <div class="button-wrapper tc"></div>
-          <a id="book__button" class="agendamedium bg-brand-red brand-cream br2 dib f6 grow mb0 ml4 mr4 no-underline ph4 pv3 tracked ttu" href="https://www.opentable.com/r/aretskys-patroon-reservations-new-york?restref=1300&lang=en-US" target="_blank">Book Now</a>
+          <a id="book__button" class="agendamedium bg-brand-red brand-cream br2 dib f6 grow mb0 ml4 mr4 no-underline ph4 pv3 tracked ttu" href="https://www.opentable.com/r/aretskys-patroon-reservations-new-york?restref=1300&lang=en-US" target="_blank">find a table</a>
         </div>
     </div>
   </section>
@@ -1032,7 +1032,18 @@ menus:
     </div>
   </section>
 
-  <section id="events" class="bg-brand-cream brand-cream latolight" style="background: linear-gradient(0deg,rgba(60, 13, 5, .6),rgba(60, 13, 5, .6)),url({{ page.events_background_image }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+  <!-- <section id="book" class="bg-brand-cream">
+    <div class="center mw5 mw8-ns tc | content-wrapper">
+      <div class="mt4 mb5">
+        <p class="f4 mb4 tracked ttu | agendamedium text-dark">reserve a table</p>
+        <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1300&domain=com&type=standard&theme=wide&lang=en-US&overlay=false&iframe=false'></script>
+        <div class="button-wrapper tc"></div>
+        <a id="book__button" class="agendamedium bg-brand-red brand-cream br2 dib f6 grow mb0 ml4 mr4 no-underline ph4 pv3 tracked ttu" href="https://www.opentable.com/r/aretskys-patroon-reservations-new-york?restref=1300&lang=en-US" target="_blank">find a table</a>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="events" class="text-dark | bg-brand-cream latolight">
     <div class="center tc | content-wrapper">
         <p class="f4 tracked ttu | agendamedium">events &amp; weddings</p>
         <p class="lh-copy">Aretsky’s Patroon is the perfect setting for an unforgettable, undeniably New York event, whether you nestle into one of our intimate rooms for a celebratory dinner or take over our entire townhouse for a wedding or special occasion.</p>
@@ -1053,6 +1064,17 @@ menus:
         </div>
     </div>
   </section>
+
+  <section id="main-carousel" class="pb6 relative tc | bg-brand-cream">
+      <!-- <p class="f4 mt0 mb4 tracked ttu | agendamedium text-dark">gallery</p> -->
+      <div class="center | main-carousel">
+        {% for slide in page.slides %}
+        <div class="item" style="background: {% if page.carousel.logo_path or page.carousel.headline or page.carousel.subheadline %}linear-gradient(0deg,rgba(60, 13, 5, .5),rgba(60, 13, 5, .5)),{% endif %}url({{ slide.image_path }}); background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover">
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
 
   <section id="contact" class="">
     <div class="fl w-100 | bg-brand-cream text-dark content-wrapper">

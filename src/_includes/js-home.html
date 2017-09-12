@@ -28,19 +28,15 @@
     setScrollOffset();
 
     // media query(s)
-    enquire.register("screen and (min-width: 480px)", {
+    enquire.register("screen and (max-width: 500px)", {
       match : function() {
-
-      }
-    }).register("screen and (max-width: 768px)", {
-      match: function() {
         var headHeight = $('#header').outerHeight();
         // var navHeight = $('#nav').outerHeight();
         var winHeight = window.innerHeight;
         var maxHeight = winHeight - headHeight;
         // $('#main-carousel').height(maxHeight);
         $('.main-carousel .item').each(function(){
-          $(this).height(400);
+          $(this).height(270);
         })
         $('.main-carousel').flickity({
           // options
@@ -57,8 +53,58 @@
           }
           // setGallerySize: true,
         });
-
-
+      }
+    }).register("screen and (max-width: 667px)", {
+      match : function() {
+        var headHeight = $('#header').outerHeight();
+        // var navHeight = $('#nav').outerHeight();
+        var winHeight = window.innerHeight;
+        var maxHeight = winHeight - headHeight;
+        // $('#main-carousel').height(maxHeight);
+        $('.main-carousel .item').each(function(){
+          $(this).height(350);
+        })
+        $('.main-carousel').flickity({
+          // options
+          cellAlign: 'left',
+          contain: true,
+          wrapAround: true,
+          draggable: true,
+          autoPlay: 4000,
+          arrowShape: {
+            x0: 15,
+            x1: 65, y1: 45,
+            x2: 70, y2: 40,
+            x3: 25
+          }
+          // setGallerySize: true,
+        });
+      }
+    }).register("screen and (max-width: 768px)", {
+      match: function() {
+        var headHeight = $('#header').outerHeight();
+        // var navHeight = $('#nav').outerHeight();
+        var winHeight = window.innerHeight;
+        var maxHeight = winHeight - headHeight;
+        // $('#main-carousel').height(maxHeight);
+        $('.main-carousel .item').each(function(){
+          $(this).height(500);
+        })
+        $('.main-carousel').flickity({
+          // options
+          cellAlign: 'left',
+          contain: true,
+          wrapAround: true,
+          draggable: true,
+          autoPlay: 4000,
+          arrowShape: {
+            x0: 15,
+            x1: 65, y1: 45,
+            x2: 70, y2: 40,
+            x3: 25
+          }
+          // setGallerySize: true,
+        });
 
         // mobile nav horizontal scroll
         // https://benfrain.com/a-horizontal-scrolling-navigation-pattern-for-touch-and-mouse-with-moving-current-indicator/
@@ -216,9 +262,12 @@
       }
     }).register("screen and (min-width: 769px)", {
       match: function() {
+
+      }
+    }).register("screen and (min-width: 960px)", {
+      match : function() {
         var nav = document.getElementById("nav");
         nav.className = 'auto center mw9';
-
 
         var headHeight = $('#header').outerHeight();
         // var navHeight = $('#nav').outerHeight();
@@ -247,9 +296,6 @@
           }
           // setGallerySize: true,
         });
-      }
-    }).register("screen and (min-width: 960px)", {
-      match : function() {
       },
       unmatch : function() {
       }

@@ -8718,6 +8718,10 @@ template {
     .home section#hero img {
       height: 150px; } }
 
+@media (min-width: 769px) {
+  .home section#main-carousel .main-carousel {
+    max-width: 1180px; } }
+
 .home section#main-carousel .main-carousel .item {
   width: 100%; }
 
@@ -8728,7 +8732,7 @@ template {
 @media (max-width: 1024px) {
   .home section#main-carousel img {
     height: auto;
-    width: 35vw; } }
+    width: 25vw; } }
 
 @media (min-width: 1025px) {
   .home section#main-carousel img {
