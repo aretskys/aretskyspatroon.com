@@ -8741,7 +8741,7 @@ template {
       height: 150px; } }
 
 @media (min-width: 769px) {
-  .home section#main-carousel .main-carousel {
+  .home section#main-carousel .main-carousel, .home section#main-carousel .caption-wrapper {
     max-width: 1180px; } }
 
 .home section#main-carousel .headline {

@@ -255,23 +255,24 @@
     // options
     cellSelector: 'img',
     // cellAlign: 'left',
-    // wrapAround: true,
+    wrapAround: true,
     // draggable: true,
-    // autoPlay: 4000,
+    autoPlay: 5000,
     // arrowShape: {
     //   x0: 15,
     //   x1: 65, y1: 45,
     //   x2: 70, y2: 40,
     //   x3: 25
     // }
-    // setGallerySize: true,
   });
   // flickity captions
   var $caption = $('.caption');
+  var $pdf = $('.pdf');
   // get flickity instance
   var flkty = $carousel.data('flickity');
   // set initial caption
   setCaption();
+  setPdf();
   // set caption
   function setCaption() {
     // use img alt
@@ -280,6 +281,19 @@
   // set caption on select
   $carousel.on( 'select.flickity', function() {
     setCaption()
+  });
+  // set pdf
+  function setPdf() {
+    // use attr
+    var link = $(flkty.selectedElement).attr('data-pdf')
+    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-download mr1' aria-hidden='true'></i>download pdf"
+    if (link) {
+      $pdf.html(html)
+    }
+  }
+  // set pdf on select
+  $carousel.on( 'select.flickity', function() {
+    setPdf()
   });
 
 </script>

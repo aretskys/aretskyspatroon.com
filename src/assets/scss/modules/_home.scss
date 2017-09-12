@@ -36,7 +36,7 @@
 
   section#main-carousel {
 
-    .main-carousel {
+    .main-carousel, .caption-wrapper {
       @media (min-width: 769px) {
         max-width: 1180px;
       }
