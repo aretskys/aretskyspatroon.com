@@ -1032,8 +1032,8 @@ private_rooms_one_sheet_path: /uploads/aretskys-private-rooms.pdf
                 <i class="mr1 | fa fa-calendar" aria-hidden="true"></i> Plan Your Event
               </button>
               <ul class="dropdown-menu">
-                  <li><a data-remodal-target="modal" class="bg-brand-brown dib ph3 pv3 near-white pointer tc" tabindex="-1">Wedding/Social Event</a></li>
-                  <li><a data-remodal-target="modal2" class="bg-brand-brown dib ph3 pv3 bt b--near-white near-white pointer tc" tabindex="-1">Corporate/Private Dining</a></li>
+                  <li><a data-remodal-target="wedding-modal" class="bg-brand-brown dib ph3 pv3 near-white pointer tc" tabindex="-1">Wedding/Social Event</a></li>
+                  <li><a data-remodal-target="event-modal" class="bg-brand-brown dib ph3 pv3 bt b--near-white near-white pointer tc" tabindex="-1">Corporate/Private Dining</a></li>
               </ul>
           </div>
         </div>
@@ -1093,5 +1093,6 @@ private_rooms_one_sheet_path: /uploads/aretskys-private-rooms.pdf
     </div>
   </section>
 
-  {% include modal.html %}
+  {% include event-modal.html %}
+  {% include wedding-modal.html %}
 

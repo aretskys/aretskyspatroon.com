@@ -8973,6 +8973,9 @@ template {
       padding-top: 4rem;
       padding-bottom: 4rem; } }
 
+.home .remodal table {
+  width: 100%; }
+
 @media (max-width: 768px) {
   .home #ot-widget-container3 {
     display: none; } }
