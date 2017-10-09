@@ -8580,17 +8580,32 @@ template {
 [hidden] {
   display: none; }
 
+#header.scroll img.logo {
+  opacity: 1 !important; }
+
+#header.scroll img.icon {
+  opacity: 0 !important; }
+
+@media (max-width: 768px) {
+  #header img.icon, #header img.logo {
+    display: none; } }
+
 @media (min-width: 769px) {
   #header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0; } }
+    right: 0; }
+    #header img.mobile-logo {
+      display: none; } }
 
 #header .header-main {
   height: 80px;
   z-index: 9; }
+  #header .header-main img {
+    transition: opacity 0.2s ease-in-out; }
   #header .header-main img.logo {
+    opacity: 0;
     height: 30%;
     position: absolute;
     top: 50%;
@@ -8598,6 +8613,31 @@ template {
     margin-left: 3rem; }
     @media (max-width: 730px) {
       #header .header-main img.logo {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; } }
+  #header .header-main img.icon {
+    opacity: 1;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 3rem; }
+    @media (max-width: 730px) {
+      #header .header-main img.icon {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; } }
+  #header .header-main img.mobile-logo {
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 3rem; }
+    @media (max-width: 730px) {
+      #header .header-main img.mobile-logo {
         margin-left: auto;
         margin-right: auto;
         left: 0;

@@ -217,7 +217,20 @@
       }
     }).register("screen and (min-width: 769px)", {
       match: function() {
-
+        // http://bit.ly/1F3VJ3d
+        var hero             = document.querySelector('#hero'),
+            hero_height      = hero.offsetHeight,
+            header            = document.getElementById('header'),
+            fix_class          = 'scroll';
+        function stickyScroll(e) {
+          if( window.pageYOffset > hero_height ) {
+            header.classList.add(fix_class);
+          }
+          if( window.pageYOffset < (hero_height) ) {
+            header.classList.remove(fix_class);
+          }
+        }
+        window.addEventListener('scroll', stickyScroll, false);
       }
     }).register("screen and (min-width: 960px)", {
       match : function() {
