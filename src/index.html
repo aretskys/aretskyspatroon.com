@@ -8,24 +8,31 @@ carousel:
 slides:
   - image_path: /uploads/slide-roof.jpg
     caption: The Aretsky's Rooftop Terrace
+    images_link:
     pdf_path:
   - image_path: /uploads/slide-gibson.jpg
     caption: The Gibson Room / seats 60
+    images_link: http://youvis.it/2frnWV
     pdf_path: /uploads/aretskys-gibson-room.pdf
   - image_path: /uploads/slide-sporting.jpg
     caption: The Sporting Room / seats 24
+    images_link: http://youvis.it/f3bmWU
     pdf_path: /uploads/aretskys-sporting-room.pdf
   - image_path: /uploads/slide-match.jpg
     caption: The Match Room / seats 12
+    images_link: http://youvis.it/SrWlkg
     pdf_path: /uploads/aretskys-match-room.pdf
   - image_path: /uploads/slide-humidor.jpg
     caption: The Humidor Room / seats 9
+    images_link: http://youvis.it/iu7vRQ
     pdf_path: /uploads/aretskys-humidor-room.pdf
   - image_path: /uploads/slide-airplane.jpg
     caption: The Airplane Room / seats 30
+    images_link: http://youvis.it/AesgB1
     pdf_path: /uploads/aretskys-airplane-room.pdf
   - image_path: /uploads/slide-cellar.jpg
     caption: The Wine Cellar / seats 12
+    images_link: http://youvis.it/halB8f
     pdf_path: /uploads/aretskys-wine-cellar.pdf
 menu_background_image: /uploads/bg-menu.jpg
 reservation_background_image: /uploads/bg-book.jpg
@@ -1045,14 +1052,15 @@ private_rooms_one_sheet_path: /uploads/aretskys-private-rooms.pdf
       <div class="center | main-carousel">
         <!-- <div class="carousel-cell"> -->
           {% for slide in page.slides %}
-            <img src="{{slide.image_path}}" alt="{{slide.caption}}" data-pdf="{{slide.pdf_path}}">
+            <img src="{{slide.image_path}}" alt="{{slide.caption}}" data-pdf="{{slide.pdf_path}}" data-images="{{slide.images_link}}">
           {% endfor %}
         <!-- </div> -->
       </div>
       <div class="center cf | caption-wrapper">
         <p class="fl mb1 ml2 ml1-ns tracked ttu | agendalight caption text-dark">&nbsp;</p>
 
-        <p class="fl fr-ns mb0 mb1-ns ml2 ml0-ns mr1 mt0 mt3-ns tracked ttu | agendalight pdf text-dark">&nbsp;</p>
+        <p class="fl fr-ns mb0 mb1-ns ml2 ml0-ns mr1 mt2 mt3-ns tracked ttu | agendalight pdf text-dark">&nbsp;</p>
+        <p class="fl fr-ns mb0 mb1-ns ml2 ml0-ns mr1 mt2 mt3-ns tracked ttu | agendalight images text-dark">&nbsp;</p>
       </div>
     </section>
 

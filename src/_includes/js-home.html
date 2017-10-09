@@ -269,11 +269,13 @@
   // flickity captions
   var $caption = $('.caption');
   var $pdf = $('.pdf');
+  var $images = $('.images');
   // get flickity instance
   var flkty = $carousel.data('flickity');
   // set initial caption
   setCaption();
   setPdf();
+  setImages();
   // set caption
   function setCaption() {
     // use img alt
@@ -287,7 +289,7 @@
   function setPdf() {
     // use attr
     var link = $(flkty.selectedElement).attr('data-pdf')
-    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-download mr1' aria-hidden='true'></i>download pdf"
+    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-download mr1 ml3-ns' aria-hidden='true'></i>download pdf"
     if (link) {
       $pdf.html(html)
     }
@@ -295,9 +297,22 @@
       $pdf.html('')
     }
   }
+  // set images
+  function setImages() {
+    // use attr
+    var link = $(flkty.selectedElement).attr('data-images')
+    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-picture-o mr1' aria-hidden='true'></i>more images"
+    if (link) {
+      $images.html(html)
+    }
+    else {
+      $images.html('')
+    }
+  }
   // set pdf on select
   $carousel.on( 'select.flickity', function() {
     setPdf()
+    setImages()
   });
 
 </script>
