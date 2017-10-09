@@ -9,7 +9,7 @@
     height: 80px;
     z-index: 9;
     img.logo {
-      height: 60%;
+      height: 30%;
       @include vertical-align(absolute);
       margin-left: 3rem;
       @media (max-width: 730px) {

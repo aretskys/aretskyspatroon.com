@@ -8591,7 +8591,7 @@ template {
   height: 80px;
   z-index: 9; }
   #header .header-main img.logo {
-    height: 60%;
+    height: 30%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
