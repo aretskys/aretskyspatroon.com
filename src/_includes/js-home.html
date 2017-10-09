@@ -302,7 +302,7 @@
   function setPdf() {
     // use attr
     var link = $(flkty.selectedElement).attr('data-pdf')
-    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-download mr1 ml3-ns' aria-hidden='true'></i>download pdf"
+    var html = "<a target='_blank' class='link text-dark' href='" + link + "'>&nbsp;/ download pdf <i class='fa fa-download mr1' aria-hidden='true'></i>"
     if (link) {
       $pdf.html(html)
     }
@@ -314,7 +314,7 @@
   function setImages() {
     // use attr
     var link = $(flkty.selectedElement).attr('data-images')
-    var html = "<a target='_blank' class='link text-dark' href='" + link + "'><i class='fa fa-picture-o mr1' aria-hidden='true'></i>more images"
+    var html = "<a target='_blank' class='link text-dark' href='" + link + "'>/ more images <i class='fa fa-picture-o mr1' aria-hidden='true'></i>"
     if (link) {
       $images.html(html)
     }
