@@ -8685,7 +8685,7 @@ template {
       height: 100%;
       line-height: 1.6em;
       color: #fdfcf3;
-      font-size: 15px;
+      font-size: 14px;
       letter-spacing: 1px;
       padding: 1rem;
       transition: color 0.1s;
@@ -8700,7 +8700,7 @@ template {
           justify-content: space-around; }
       #header #nav .navitem {
         color: #fdfcf3;
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 1px;
         padding: 1.4em 0;
         transition: color 0.1s;
@@ -10567,5 +10567,17 @@ sub {
 .raleway {
   font-family: 'Raleway', sans-serif;
   font-weight: 400 !important; }
+
+.montserratlight {
+  font-family: "Montserrat";
+  font-weight: 300 !important; }
+
+.montserratmedium {
+  font-family: "Montserrat";
+  font-weight: 400 !important; }
+
+.montserratbold {
+  font-family: "Montserrat";
+  font-weight: 500 !important; }
 
 /*# sourceMappingURL=style.css.map */
